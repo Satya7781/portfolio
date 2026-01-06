@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Satya Chouhan | Full-Stack Developer</title>
+    <meta name="description"
+        content="Computer Science student specializing in full-stack development, real-time applications, and innovative web solutions">
+
+    <!-- Google Fonts - Cinematic Typography -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
+        rel="stylesheet">
+
+    <!-- FontAwesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+
+    <!-- Three.js for 3D -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
+
+    <!-- Styles -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="preloader-content">
+            <div class="preloader-line"></div>
+            <div class="preloader-counter">0%</div>
+        </div>
+    </div>
+
+    <!-- 3D Canvas Background -->
+    <canvas id="webgl-canvas"></canvas>
+
+    <!-- Noise Texture Overlay -->
+    <div class="noise-overlay"></div>
+
+    <!-- Navigation -->
+    <nav class="navbar">
+        <div class="nav-container">
+            <a href="#hero" class="logo">
+                <span class="logo-text">SATYA</span>
+                <span class="logo-dot">.</span>
+            </a>
+            <ul class="nav-links">
+                <li><a href="#hero" class="nav-link active">Home</a></li>
+                <li><a href="#about" class="nav-link">About</a></li>
+                <li><a href="#skills" class="nav-link">Skills</a></li>
+                <li><a href="#projects" class="nav-link">Projects</a></li>
+                <li><a href="#achievements" class="nav-link">Achievements</a></li>
+                <li><a href="#contact" class="nav-link">Contact</a></li>
+            </ul>
+            <div class="menu-toggle">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Scroll Progress -->
+    <div class="scroll-progress"></div>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero-section">
+        <div class="hero-container">
+            <div class="hero-content">
+                <div class="hero-label" data-scroll-reveal>
+                    <span class="hero-label-icon">◆</span>
+                    <span class="hero-label-text">FULL-STACK DEVELOPER</span>
+                </div>
+
+                <h1 class="hero-title" data-scroll-reveal>
+                    <span class="hero-title-line">BUILDING</span>
+                    <span class="hero-title-line hero-title-accent">INNOVATIVE</span>
+                    <span class="hero-title-line">SOLUTIONS</span>
+                </h1>
+
+                <p class="hero-subtitle" data-scroll-reveal>
+                    Computer Science student passionate about creating real-world applications,<br>
+                    from collaborative code editors to real-time platforms.
+                </p>
+
+                <div class="hero-cta" data-scroll-reveal>
+                    <a href="#projects" class="btn btn-primary">
+                        <span class="btn-text">View Projects</span>
+                        <span class="btn-icon">→</span>
+                    </a>
+                    <a href="https://drive.google.com/file/d/1LSoYgqFDt0Ncz0KiHhJ3au528Zjh4uAW/view?usp=drive_link"
+                        target="_blank" class="btn btn-secondary">
+                        <span class="btn-text">Download Resume</span>
+                    </a>
+                </div>
+            </div>
+
+            <!-- Scroll Indicator -->
+            <div class="scroll-indicator" data-scroll-reveal>
+                <div class="scroll-indicator-line"></div>
+                <span class="scroll-indicator-text">SCROLL</span>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="about-container">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-label">WHO I AM</span>
+                <h2 class="section-title">About Me</h2>
+            </div>
+
+            <div class="about-grid">
+                <!-- Left Column: Profile Card -->
+                <div class="about-profile-wrapper" data-scroll-reveal>
+                    <div class="profile-card">
+                        <div class="profile-image-container">
+                            <div class="profile-image-glow"></div>
+                            <img src="assets/images/profile.jpg" alt="Satya Chouhan" class="profile-image-real">
+                        </div>
+                        <h3 class="profile-name">Satya Chouhan</h3>
+                        <p class="profile-role">Full-Stack Developer</p>
+                        <div class="profile-social">
+                            <a href="https://github.com/Satya7781" target="_blank" class="social-btn"><i
+                                    class="fab fa-github"></i></a>
+                            <a href="https://linkedin.com/in/satya-chouhan" target="_blank" class="social-btn"><i
+                                    class="fab fa-linkedin-in"></i></a>
+                            <a href="mailto:contact@satya.dev" class="social-btn"><i class="fas fa-envelope"></i></a>
+                        </div>
+                        <div class="profile-location">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>India</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right Column: Bio & Stats -->
+                <div class="about-bio" data-scroll-reveal>
+                    <div class="about-badge">
+                        <span class="badge-icon"><i class="fas fa-code"></i></span>
+                        <span class="badge-text">Vibe Coder</span>
+                    </div>
+
+                    <h3 class="about-headline">Turning Complex Ideas Into <span class="text-gradient">Elegant
+                            Reality</span></h3>
+
+                    <div class="about-text-content">
+                        <p>
+                            I'm a <strong>Computer Science student</strong> (B.Tech, Class of 2026) driven by the thrill
+                            of creation. I don't just write code; I engineer experiences. From high-performance
+                            real-time systems to pixel-perfect user interfaces, I obsess over every detail.
+                        </p>
+                        <p>
+                            My philosophy is simple: <strong>Build things that matter.</strong> Whether it's a
+                            collaborative tool for developers or an AI-powered educational platform, I aim to solve real
+                            problems with clean, scalable, and efficient code.
+                        </p>
+                    </div>
+
+                    <div class="about-stats-enhanced">
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">15+</span>
+                                <span class="stat-label">Projects Shipped</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">20+</span>
+                                <span class="stat-label">Tech Stack</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-trophy"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">4</span>
+                                <span class="stat-label">Hackathon Wins</span>
+                            </div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
+                            <div class="stat-info">
+                                <span class="stat-value">2+</span>
+                                <span class="stat-label">Years Exp.</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Skills Section -->
+    <section id="skills" class="skills-section">
+        <div class="skills-container">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-label">TECH STACK</span>
+                <h2 class="section-title">Skills & Technologies</h2>
+                <p class="section-subtitle">Tools I use to build exceptional digital experiences</p>
+            </div>
+
+            <!-- Proficiency Bars -->
+            <div class="proficiency-section" data-scroll-reveal>
+                <h3 class="proficiency-title">Core Competencies</h3>
+                <div class="proficiency-grid">
+                    <div class="proficiency-item">
+                        <div class="proficiency-header">
+                            <span class="proficiency-name">Full-Stack Development</span>
+                            <span class="proficiency-percent">90%</span>
+                        </div>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 90%"></div>
+                        </div>
+                    </div>
+                    <div class="proficiency-item">
+                        <div class="proficiency-header">
+                            <span class="proficiency-name">React & JavaScript</span>
+                            <span class="proficiency-percent">85%</span>
+                        </div>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 85%"></div>
+                        </div>
+                    </div>
+                    <div class="proficiency-item">
+                        <div class="proficiency-header">
+                            <span class="proficiency-name">Backend (Node.js, Python)</span>
+                            <span class="proficiency-percent">80%</span>
+                        </div>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 80%"></div>
+                        </div>
+                    </div>
+                    <div class="proficiency-item">
+                        <div class="proficiency-header">
+                            <span class="proficiency-name">Database Design</span>
+                            <span class="proficiency-percent">75%</span>
+                        </div>
+                        <div class="proficiency-bar">
+                            <div class="proficiency-fill" style="width: 75%"></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tech Stack Grid - Enhanced -->
+            <div class="tech-stack-grid-enhanced">
+                <!-- Frontend -->
+                <div class="tech-category-enhanced" data-scroll-reveal>
+                    <div class="tech-category-header">
+                        <div class="tech-category-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-width="2"
+                                    stroke-linecap="round" stroke-linejoin="round" />
+                            </svg>
+                        </div>
+                        <h3>Frontend Development</h3>
+                    </div>
+                    <div class="tech-items-grid">
+                        <div class="tech-badge" data-tech="html">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #e34c26, #f06529);">
+                                <i class="fab fa-html5"></i>
+                            </div>
+                            <span class="tech-badge-name">HTML5</span>
+                        </div>
+                        <div class="tech-badge" data-tech="css">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #264de4, #2965f1);">
+                                <i class="fab fa-css3-alt"></i>
+                            </div>
+                            <span class="tech-badge-name">CSS3</span>
+                        </div>
+                        <div class="tech-badge" data-tech="js">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #f0db4f, #f7df1e);">
+                                <i class="fab fa-js" style="color: #000;"></i>
+                            </div>
+                            <span class="tech-badge-name">JavaScript</span>
+                        </div>
+                        <div class="tech-badge" data-tech="react">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #61dafb, #00d8ff);">
+                                <i class="fab fa-react" style="color: #000;"></i>
+                            </div>
+                            <span class="tech-badge-name">React.js</span>
+                        </div>
+                        <div class="tech-badge" data-tech="ts">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #3178c6, #235a97);">
+                                <i class="fab fa-js-square"></i>
+                            </div>
+                            <span class="tech-badge-name">TypeScript</span>
+                        </div>
+                        <div class="tech-badge" data-tech="tailwind">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
+                                <i class="fas fa-wind"></i>
+                            </div>
+                            <span class="tech-badge-name">Tailwind</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Backend -->
+                <div class="tech-category-enhanced" data-scroll-reveal>
+                    <div class="tech-category-header">
+                        <div class="tech-category-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <rect x="2" y="3" width="20" height="14" rx="2" stroke-width="2" />
+                                <path d="M8 21h8M12 17v4" stroke-width="2" stroke-linecap="round" />
+                            </svg>
+                        </div>
+                        <h3>Backend Development</h3>
+                    </div>
+                    <div class="tech-items-grid">
+                        <div class="tech-badge" data-tech="node">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #68a063, #539e4e);">
+                                <i class="fab fa-node-js"></i>
+                            </div>
+                            <span class="tech-badge-name">Node.js</span>
+                        </div>
+                        <div class="tech-badge" data-tech="express">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #444, #000);">
+                                <i class="fas fa-server"></i>
+                            </div>
+                            <span class="tech-badge-name">Express</span>
+                        </div>
+                        <div class="tech-badge" data-tech="python">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #3776ab, #ffd43b);">
+                                <i class="fab fa-python"></i>
+                            </div>
+                            <span class="tech-badge-name">Python</span>
+                        </div>
+                        <div class="tech-badge" data-tech="django">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #092e20, #0c4b33);">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span class="tech-badge-name">Django</span>
+                        </div>
+                        <div class="tech-badge" data-tech="java">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #f89820, #e76f00);">
+                                <i class="fab fa-java"></i>
+                            </div>
+                            <span class="tech-badge-name">Java</span>
+                        </div>
+                        <div class="tech-badge" data-tech="cpp">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #00599c, #004482);">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span class="tech-badge-name">C/C++</span>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Database & Tools -->
+                <div class="tech-category-enhanced" data-scroll-reveal>
+                    <div class="tech-category-header">
+                        <div class="tech-category-icon">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <ellipse cx="12" cy="5" rx="9" ry="3" stroke-width="2" />
+                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" stroke-width="2" />
+                                <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" stroke-width="2" />
+                            </svg>
+                        </div>
+                        <h3>Database & Tools</h3>
+                    </div>
+                    <div class="tech-items-grid">
+                        <div class="tech-badge" data-tech="mongo">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #47a248, #3f9142);">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span class="tech-badge-name">MongoDB</span>
+                        </div>
+                        <div class="tech-badge" data-tech="mysql">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #00758f, #005f73);">
+                                <i class="fas fa-database"></i>
+                            </div>
+                            <span class="tech-badge-name">MySQL</span>
+                        </div>
+                        <div class="tech-badge" data-tech="git">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #f05032, #e84e31);">
+                                <i class="fab fa-git-alt"></i>
+                            </div>
+                            <span class="tech-badge-name">Git</span>
+                        </div>
+                        <div class="tech-badge" data-tech="docker">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #2496ed, #1d7fc5);">
+                                <i class="fab fa-docker"></i>
+                            </div>
+                            <span class="tech-badge-name">Docker</span>
+                        </div>
+                        <div class="tech-badge" data-tech="figma">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #f24e1e, #ff7262);">
+                                <i class="fab fa-figma"></i>
+                            </div>
+                            <span class="tech-badge-name">Figma</span>
+                        </div>
+                        <div class="tech-badge" data-tech="vscode">
+                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #007acc, #005a9e);">
+                                <i class="fas fa-code"></i>
+                            </div>
+                            <span class="tech-badge-name">VS Code</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="projects-section">
+        <div class="projects-container">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-label">PORTFOLIO</span>
+                <h2 class="section-title">Featured Projects</h2>
+                <p class="section-subtitle">Real-world applications built with modern technologies</p>
+            </div>
+
+            <div class="projects-showcase">
+                <!-- Project 1 -->
+                <article class="project-showcase-item" data-scroll-reveal>
+                    <div class="project-visual">
+                        <div class="project-visual-inner">
+                            <div class="project-visual-overlay"></div>
+                            <img src="assets/images/projects/code-editor.png" alt="Real-Time Code Editor"
+                                class="project-image-real">
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-number-large">01</div>
+                        <h3 class="project-title-large">Real-Time Collaborative Code Editor</h3>
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fas fa-laptop-code"></i> Full-Stack</span>
+                            <span class="project-separator">•</span>
+                            <span class="project-type"><i class="fas fa-network-wired"></i> WebRTC</span>
+                        </div>
+                        <p class="project-desc-large">
+                            Built a collaborative coding platform where multiple developers can write, edit, and debug
+                            code together in real-time—with integrated video calling for seamless communication. Think
+                            Google Docs, but for code.
+                        </p>
+                        <div class="project-impact-box">
+                            <i class="fas fa-chart-line"></i>
+                            <span><strong>Impact:</strong> Enables remote pair programming with zero latency. Used by
+                                50+ beta testers for hackathons.</span>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fab fa-react"></i> React.js</span>
+                            <span class="tech-pill"><i class="fas fa-plug"></i> WebSockets</span>
+                            <span class="tech-pill"><i class="fab fa-node-js"></i> Node.js</span>
+                            <span class="tech-pill"><i class="fas fa-video"></i> WebRTC</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Satya7781/Realtime_code_editor" target="_blank"
+                                class="btn btn-primary btn-sm">
+                                <span class="btn-text">View Code</span>
+                                <span class="btn-icon"><i class="fab fa-github"></i></span>
+                            </a>
+
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 2 -->
+                <article class="project-showcase-item" data-scroll-reveal>
+                    <div class="project-visual">
+                        <div class="project-visual-inner">
+                            <div class="project-visual-overlay"></div>
+                            <img src="assets/images/projects/pdf-reader.png" alt="Interactive PDF Reader"
+                                class="project-image-real">
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-number-large">02</div>
+                        <h3 class="project-title-large">Interactive PDF Reader</h3>
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fab fa-adobe"></i> Adobe Hackathon</span>
+                            <span class="project-separator">•</span>
+                            <span class="project-type"><i class="fas fa-cogs"></i> API Integration</span>
+                        </div>
+                        <p class="project-desc-large">
+                            Competed in Adobe's <em>Connecting the Dots</em> challenge by building an interactive PDF
+                            reader using Adobe's PDF Embed API. Focused on creating a smooth, distraction-free reading
+                            experience with smart navigation.
+                        </p>
+                        <div class="project-impact-box">
+                            <i class="fas fa-trophy"></i>
+                            <span><strong>Outcome:</strong> Selected for second round. Delivered a functional prototype
+                                in 48 hours using enterprise-grade APIs.</span>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tech-pill"><i class="fas fa-file-alt"></i> Adobe PDF API</span>
+                            <span class="tech-pill"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="tech-pill"><i class="fab fa-css3-alt"></i> CSS3</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="https://github.com/Satya7781/mejor-1-PDF-Analyzer" target="_blank"
+                                class="btn btn-primary btn-sm">
+                                <span class="btn-text">View Code</span>
+                                <span class="btn-icon"><i class="fab fa-github"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+
+                <!-- Project 3 -->
+                <article class="project-showcase-item" data-scroll-reveal>
+                    <div class="project-visual">
+                        <div class="project-visual-inner">
+                            <div class="project-visual-overlay"></div>
+                            <img src="assets/images/projects/discussion-platform.png" alt="Group Discussion Platform"
+                                class="project-image-real">
+                        </div>
+                    </div>
+                    <div class="project-details">
+                        <div class="project-number-large">03</div>
+                        <h3 class="project-title-large">Group Discussion Platform</h3>
+                        <div class="project-meta">
+                            <span class="project-type"><i class="fas fa-globe"></i> Web App</span>
+                            <span class="project-separator">•</span>
+                            <span class="project-type"><i class="fas fa-clock"></i> Real-Time</span>
+                        </div>
+                        <p class="project-desc-large">
+                            Created a web-based platform for structured group discussions—designed for remote teams,
+                            interview prep, and collaborative brainstorming. Built with simplicity and speed in mind.
+                        </p>
+                        <div class="project-impact-box">
+                            <i class="fas fa-users"></i>
+                            <span><strong>Use Case:</strong> Helps students practice for group discussions and teams run
+                                async brainstorming sessions.</span>
+                        </div>
+                        <div class="project-tech-stack">
+                            <span class="tech-pill"><i class="fab fa-html5"></i> HTML5</span>
+                            <span class="tech-pill"><i class="fab fa-css3-alt"></i> CSS3</span>
+                            <span class="tech-pill"><i class="fab fa-js"></i> JavaScript</span>
+                            <span class="tech-pill"><i class="fas fa-server"></i> Backend APIs</span>
+                        </div>
+                        <div class="project-actions">
+                            <a href="#" class="btn btn-secondary btn-sm disabled">
+                                <span class="btn-text">Coming Soon</span>
+                                <span class="btn-icon"><i class="fas fa-hourglass-half"></i></span>
+                            </a>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements-section">
+        <div class="achievements-container">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-label">MILESTONES</span>
+                <h2 class="section-title">Achievements & Recognition</h2>
+                <p class="section-subtitle">Hackathons, certifications, and competitive programming</p>
+            </div>
+
+            <div class="timeline-container">
+                <!-- Timeline Item 1 -->
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-trophy"></i>
+                        </div>
+                        <h3 class="timeline-title">SISTec Innovation Hackathon</h3>
+                        <p class="timeline-description">
+                            Secured <strong>1st place</strong> in the EdTech theme and <strong>4th place
+                                overall</strong>. Built an innovative learning platform that solves real-world
+                            educational challenges.
+                        </p>
+                        <span class="timeline-tag">Winner</span>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 2 -->
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-medal"></i>
+                        </div>
+                        <h3 class="timeline-title">Samadhan 2.0 Hackathon</h3>
+                        <p class="timeline-description">
+                            Achieved <strong>4th place</strong> in this national-level hackathon. Developed a scalable
+                            solution for smart city management using IoT and web technologies.
+                        </p>
+                        <span class="timeline-tag">National Finalist</span>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 3 -->
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2025</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-university"></i>
+                        </div>
+                        <h3 class="timeline-title">FinEdge Hackathon (IIT Bombay)</h3>
+                        <p class="timeline-description">
+                            Secured <strong>6th place</strong> among top teams nationwide. Created a fintech solution
+                            focusing on financial literacy and accessibility.
+                        </p>
+                        <span class="timeline-tag">Top 10</span>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 4 -->
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2024</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fab fa-adobe"></i>
+                        </div>
+                        <h3 class="timeline-title">Adobe Hackathon</h3>
+                        <p class="timeline-description">
+                            Selected for the <strong>second round</strong> in Adobe's "Connecting the Dots" challenge.
+                            Built an interactive PDF experience using Adobe's PDF Embed API.
+                        </p>
+                        <span class="timeline-tag">Shortlisted</span>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 5 -->
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2023-24</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-certificate"></i>
+                        </div>
+                        <h3 class="timeline-title">Full-Stack Certifications</h3>
+                        <p class="timeline-description">
+                            Mastered <strong>Java Full Stack</strong> and <strong>Python Django</strong> through
+                            comprehensive certification programs. Built strong foundation in backend architecture.
+                        </p>
+                        <span class="timeline-tag">Certified</span>
+                    </div>
+                </div>
+
+                <!-- Timeline Item 6 -->
+                <div class="timeline-item" data-scroll-reveal>
+                    <div class="timeline-dot"></div>
+                    <div class="timeline-date">2022-24</div>
+                    <div class="timeline-content">
+                        <div class="timeline-icon">
+                            <i class="fas fa-code-branch"></i>
+                        </div>
+                        <h3 class="timeline-title">15+ Projects Delivered</h3>
+                        <p class="timeline-description">
+                            Successfully designed, built, and deployed over <strong>15 real-world applications</strong>,
+                            ranging from simple tools to complex full-stack platforms.
+                        </p>
+                        <span class="timeline-tag">Milestone</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="contact-section">
+        <div class="contact-container">
+            <div class="section-header" data-scroll-reveal>
+                <span class="section-label">GET IN TOUCH</span>
+                <h2 class="section-title">Let's Build Something<br>Together</h2>
+            </div>
+
+            <div class="contact-content">
+                <div class="contact-info" data-scroll-reveal>
+                    <div class="contact-status">
+                        <span class="status-dot"></span>
+                        <span class="status-text">Available for new opportunities</span>
+                    </div>
+
+                    <p class="contact-intro">
+                        Have an idea? Let's build it. I'm currently looking for <span class="text-highlight">Full-Stack
+                            roles</span> or challenging freelance projects.
+                    </p>
+
+                    <div class="contact-details">
+                        <a href="mailto:satyachouhan778107@gmail.com" class="contact-card-item">
+                            <div class="contact-icon-box">
+                                <i class="fas fa-envelope"></i>
+                            </div>
+                            <div class="contact-text-group">
+                                <span class="contact-label-small">Email</span>
+                                <span class="contact-value-large">satyachouhan778107@gmail.com</span>
+                            </div>
+                        </a>
+
+                        <div class="contact-card-item">
+                            <div class="contact-icon-box">
+                                <i class="fas fa-map-marker-alt"></i>
+                            </div>
+                            <div class="contact-text-group">
+                                <span class="contact-label-small">Location</span>
+                                <span class="contact-value-large">Bhopal, India</span>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="social-connect">
+                        <h4 class="social-heading">Connect with me</h4>
+                        <div class="social-links-large">
+                            <a href="https://github.com/Satya7781" target="_blank" class="social-btn-large">
+                                <i class="fab fa-github"></i>
+                            </a>
+                            <a href="https://www.linkedin.com/in/satya-chouhan-68361232a" target="_blank"
+                                class="social-btn-large">
+                                <i class="fab fa-linkedin-in"></i>
+                            </a>
+                            <a href="https://discord.com/users/1417163691085791314" class="social-btn-large">
+                                <i class="fab fa-discord"></i>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="contact-form-wrapper" data-scroll-reveal>
+                    <form class="contact-form-premium" action="https://formspree.io/f/mkogladz" method="POST">
+                        <h3 class="form-title">Send a Message</h3>
+                        <div class="form-grid">
+                            <div class="form-group-premium">
+                                <input type="text" id="name" name="name" required placeholder=" ">
+                                <label for="name">Your Name</label>
+                                <i class="fas fa-user input-icon"></i>
+                            </div>
+                            <div class="form-group-premium">
+                                <input type="email" id="email" name="email" required placeholder=" ">
+                                <label for="email">Your Email</label>
+                                <i class="fas fa-envelope input-icon"></i>
+                            </div>
+                        </div>
+                        <div class="form-group-premium">
+                            <input type="text" id="subject" name="subject" required placeholder=" ">
+                            <label for="subject">Subject</label>
+                            <i class="fas fa-tag input-icon"></i>
+                        </div>
+                        <div class="form-group-premium">
+                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
+                            <label for="message">Your Message</label>
+                            <i class="fas fa-comment-alt input-icon textarea-icon"></i>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-lg btn-glow">
+                            <span class="btn-text">Send Message</span>
+                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <p class="footer-quote">"The best code is the code that ships."</p>
+            <p class="footer-text">© 2025 Satya Chouhan • Built with intention • Designed for impact</p>
+        </div>
+    </footer>
+
+    <!-- Custom Cursor -->
+    <div class="cursor">
+        <div class="cursor-dot"></div>
+        <div class="cursor-outline"></div>
+    </div>
+
+    <!-- Scripts -->
+    <script src="script.js"></script>
+</body>
+
+</html>
