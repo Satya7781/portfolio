@@ -521,10 +521,8 @@ document.addEventListener('DOMContentLoaded', () => {
     preloader.init();
 
     // 3D Background
-    if (window.innerWidth > 768) {
-        const background3D = new Background3D();
-        background3D.init();
-    }
+    const background3D = new Background3D();
+    background3D.init();
 
     // Navigation
     const navigation = new Navigation();
