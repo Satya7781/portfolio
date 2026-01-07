@@ -30,8 +30,8 @@
     --glass-glow: rgba(74, 158, 255, 0.15);
 
     /* Spacing */
-    --section-padding: clamp(80px, 12vw, 160px);
-    --container-padding: clamp(20px, 5vw, 80px);
+    --section-padding: clamp(5%, 12vw, 10%);
+    --container-padding: clamp(3%, 5vw, 8%);
 
     /* Typography */
     --font-primary: 'Space Grotesk', sans-serif;
@@ -162,7 +162,7 @@ body {
     top: 0;
     left: 0;
     width: 100%;
-    padding: 30px 0;
+    padding: 2% 0;
     z-index: 1000;
     transition: all 0.4s var(--transition-smooth);
 }
@@ -170,7 +170,7 @@ body {
 .navbar.scrolled {
     background: rgba(5, 5, 5, 0.8);
     backdrop-filter: blur(20px);
-    padding: 20px 0;
+    padding: 1.5% 0;
     border-bottom: 1px solid var(--glass-border);
 }
 
@@ -294,11 +294,11 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 8px 20px;
+    padding: 0.5% 1.5%;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 50px;
-    margin-bottom: 40px;
+    margin-bottom: 2.5%;
     backdrop-filter: blur(10px);
 }
 
@@ -341,7 +341,7 @@ body {
     line-height: 1.8;
     color: var(--text-secondary);
     max-width: 700px;
-    margin-bottom: 60px;
+    margin-bottom: 4%;
     font-weight: 300;
 }
 
@@ -358,7 +358,7 @@ body {
     display: inline-flex;
     align-items: center;
     gap: 12px;
-    padding: 18px 40px;
+    padding: 1.2% 3%;
     font-family: var(--font-primary);
     font-size: 13px;
     font-weight: 600;
@@ -597,7 +597,7 @@ section {
 }
 
 .work-card-content {
-    padding: 40px;
+    padding: 3%;
 }
 
 .work-card-header {
@@ -636,7 +636,7 @@ section {
 }
 
 .tech-tag {
-    padding: 6px 16px;
+    padding: 0.4% 1.2%;
     background: rgba(255, 255, 255, 0.05);
     border: 1px solid rgba(255, 255, 255, 0.1);
     border-radius: 20px;
@@ -698,9 +698,10 @@ section {
 .contact-content {
     display: grid;
     grid-template-columns: 1fr 1.2fr;
-    gap: 80px;
-    margin-top: 60px;
+    gap: 5%;
+    margin-top: 4%;
     align-items: start;
+    padding: 0 2%;
 }
 
 /* Contact Info (Left) */
@@ -713,11 +714,11 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 10px;
-    padding: 8px 16px;
+    padding: 0.5% 1.2%;
     background: rgba(46, 204, 113, 0.1);
     border: 1px solid rgba(46, 204, 113, 0.2);
     border-radius: 50px;
-    margin-bottom: 30px;
+    margin-bottom: 2%;
     width: fit-content;
 }
 
@@ -767,15 +768,15 @@ section {
 .contact-details {
     display: flex;
     flex-direction: column;
-    gap: 20px;
-    margin-bottom: 50px;
+    gap: 1.5%;
+    margin-bottom: 3%;
 }
 
 .contact-card-item {
     display: flex;
     align-items: center;
     gap: 20px;
-    padding: 20px;
+    padding: 1.5%;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
@@ -832,7 +833,7 @@ section {
     color: var(--text-secondary);
     text-transform: uppercase;
     letter-spacing: 2px;
-    margin-bottom: 20px;
+    margin-bottom: 1.5%;
 }
 
 .social-links-large {
@@ -866,7 +867,7 @@ section {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 24px;
-    padding: 40px;
+    padding: clamp(30px, 5%, 60px);
     backdrop-filter: blur(20px);
     box-shadow: 0 30px 60px rgba(0, 0, 0, 0.3);
 }
@@ -875,20 +876,20 @@ section {
     font-family: var(--font-primary);
     font-size: 24px;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 2.5%;
     color: var(--text-primary);
 }
 
 .contact-form-premium {
     display: flex;
     flex-direction: column;
-    gap: 25px;
+    gap: 2%;
 }
 
 .form-grid {
     display: grid;
     grid-template-columns: 1fr 1fr;
-    gap: 25px;
+    gap: 2%;
 }
 
 .form-group-premium {
@@ -898,7 +899,7 @@ section {
 .form-group-premium input,
 .form-group-premium textarea {
     width: 100%;
-    padding: 15px 20px 15px 50px;
+    padding: 18px 20px 18px 50px;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--glass-border);
     border-radius: 12px;
@@ -912,7 +913,7 @@ section {
 .form-group-premium textarea {
     resize: vertical;
     min-height: 120px;
-    padding-top: 20px;
+    padding-top: 22px;
 }
 
 .form-group-premium input:focus,
@@ -924,7 +925,7 @@ section {
 
 .form-group-premium label {
     position: absolute;
-    top: 16px;
+    top: 18px;
     left: 50px;
     font-size: 15px;
     color: var(--text-tertiary);
@@ -948,7 +949,7 @@ section {
 
 .input-icon {
     position: absolute;
-    top: 18px;
+    top: 20px;
     left: 20px;
     font-size: 16px;
     color: var(--text-tertiary);
@@ -956,7 +957,7 @@ section {
 }
 
 .textarea-icon {
-    top: 22px;
+    top: 24px;
 }
 
 .form-group-premium input:focus~.input-icon,
@@ -965,9 +966,9 @@ section {
 }
 
 .btn-lg {
-    padding: 16px 32px;
+    padding: 1.2% 2.5%;
     font-size: 16px;
-    margin-top: 10px;
+    margin-top: 1%;
 }
 
 .btn-glow {
@@ -982,7 +983,7 @@ section {
    FOOTER
    ======================================== */
 .footer {
-    padding: 60px 0;
+    padding: 4% 0;
     border-top: 1px solid var(--glass-border);
 }
 
@@ -1011,12 +1012,19 @@ section {
     overflow: hidden;
 }
 
+.about-container {
+    max-width: 1600px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
 .about-grid {
     display: grid;
     grid-template-columns: 350px 1fr;
-    gap: 80px;
-    margin-top: 60px;
+    gap: 5%;
+    margin-top: 4%;
     align-items: start;
+    padding: 0 2%;
 }
 
 /* Profile Card (Left) */
@@ -1024,7 +1032,7 @@ section {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 24px;
-    padding: 40px 30px;
+    padding: 3% 2.5%;
     text-align: center;
     position: sticky;
     top: 100px;
@@ -1138,11 +1146,11 @@ section {
     display: inline-flex;
     align-items: center;
     gap: 8px;
-    padding: 8px 16px;
+    padding: 0.5% 1.2%;
     background: rgba(212, 175, 55, 0.1);
     border: 1px solid rgba(212, 175, 55, 0.2);
     border-radius: 50px;
-    margin-bottom: 25px;
+    margin-bottom: 2%;
 }
 
 .badge-icon {
@@ -1162,7 +1170,7 @@ section {
     font-family: var(--font-primary);
     font-size: 42px;
     font-weight: 700;
-    margin-bottom: 30px;
+    margin-bottom: 2.5%;
     line-height: 1.2;
 }
 
@@ -1170,7 +1178,7 @@ section {
     font-size: 17px;
     line-height: 1.8;
     color: var(--text-secondary);
-    margin-bottom: 25px;
+    margin-bottom: 2%;
 }
 
 .about-text-content strong {
@@ -1182,15 +1190,15 @@ section {
 .about-stats-enhanced {
     display: grid;
     grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-    margin-top: 40px;
+    gap: 1.5%;
+    margin-top: 3%;
 }
 
 .stat-item {
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
-    padding: 20px;
+    padding: 1.5%;
     display: flex;
     align-items: center;
     gap: 20px;
@@ -1312,7 +1320,7 @@ section {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 20px;
-    padding: 40px;
+    padding: 3%;
     backdrop-filter: blur(20px);
     transition: all 0.3s var(--transition-smooth);
 }
@@ -1345,7 +1353,7 @@ section {
 }
 
 .tech-item {
-    padding: 12px 20px;
+    padding: 0.8% 1.5%;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 10px;
@@ -1378,7 +1386,7 @@ section {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 24px;
-    padding: 40px;
+    padding: 3%;
     backdrop-filter: blur(20px);
     transition: all 0.4s var(--transition-smooth);
 }
@@ -1427,7 +1435,7 @@ section {
     flex-direction: column;
     align-items: center;
     gap: 12px;
-    padding: 20px 15px;
+    padding: 1.5% 1.2%;
     background: rgba(255, 255, 255, 0.02);
     border: 1px solid rgba(255, 255, 255, 0.05);
     border-radius: 16px;
@@ -1584,7 +1592,7 @@ section {
 }
 
 .project-content {
-    padding: 40px;
+    padding: 3%;
 }
 
 /* Project Visual */
@@ -1592,7 +1600,7 @@ section {
     position: relative;
     height: 450px;
     border-radius: 24px;
-    padding: 10px;
+    padding: 0.8%;
     background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.01));
     border: 1px solid var(--glass-border);
     transition: transform 0.5s var(--transition-smooth);
@@ -1718,9 +1726,9 @@ section {
 .project-impact-box {
     background: rgba(74, 158, 255, 0.05);
     border-left: 3px solid var(--electric-blue);
-    padding: 20px;
+    padding: 1.5%;
     border-radius: 0 12px 12px 0;
-    margin-bottom: 30px;
+    margin-bottom: 2%;
     display: flex;
     gap: 15px;
     align-items: flex-start;
@@ -1746,7 +1754,7 @@ section {
 }
 
 .tech-pill {
-    padding: 8px 16px;
+    padding: 0.5% 1.2%;
     background: rgba(255, 255, 255, 0.03);
     border: 1px solid var(--glass-border);
     border-radius: 50px;
@@ -1819,11 +1827,11 @@ section {
 }
 
 .timeline-item {
-    padding: 10px 40px;
+    padding: 0.8% 3%;
     position: relative;
     width: 50%;
     box-sizing: border-box;
-    margin-bottom: 40px;
+    margin-bottom: 2.5%;
 }
 
 /* Left and Right positioning */
@@ -1882,7 +1890,7 @@ section {
 
 /* Content Card */
 .timeline-content {
-    padding: 30px;
+    padding: 2.5%;
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 16px;
@@ -1939,7 +1947,7 @@ section {
 
 .timeline-tag {
     display: inline-block;
-    padding: 6px 14px;
+    padding: 0.4% 1%;
     background: rgba(74, 158, 255, 0.1);
     border: 1px solid rgba(74, 158, 255, 0.2);
     border-radius: 20px;
@@ -2029,7 +2037,8 @@ section {
 @media (max-width: 1024px) {
     .about-grid {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 4%;
+        padding: 0 3%;
     }
 
     .profile-card {
@@ -2075,15 +2084,16 @@ section {
 
     .contact-content {
         grid-template-columns: 1fr;
-        gap: 60px;
+        gap: 4%;
+        padding: 0 3%;
     }
 }
 
 
 @media (max-width: 768px) {
     :root {
-        --section-padding: 60px;
-        --container-padding: 20px;
+        --section-padding: 8%;
+        --container-padding: 4%;
     }
 
     .nav-links {
@@ -2127,7 +2137,7 @@ section {
 
     .btn {
         width: auto;
-        padding: 15px 30px;
+        padding: 2% 4%;
         font-size: 12px;
     }
 
@@ -2137,6 +2147,11 @@ section {
 
     .about-stats-enhanced {
         grid-template-columns: 1fr;
+    }
+
+    .about-grid {
+        padding: 0 4%;
+        gap: 6%;
     }
 
     .proficiency-grid {
@@ -2178,9 +2193,9 @@ section {
 
     .timeline-item {
         width: 100%;
-        padding-left: 60px;
+        padding-left: 8%;
         padding-right: 0;
-        margin-bottom: 30px;
+        margin-bottom: 4%;
     }
 
     .timeline-item:nth-child(even) {
@@ -2226,7 +2241,7 @@ section {
     }
 
     .contact-form-wrapper {
-        padding: 30px;
+        padding: 4%;
     }
 
     .works-grid {
@@ -2235,7 +2250,7 @@ section {
     }
 
     .work-card-content {
-        padding: 30px;
+        padding: 4%;
     }
 
     .cursor {
@@ -2245,8 +2260,8 @@ section {
 
 @media (max-width: 480px) {
     :root {
-        --section-padding: 60px;
-        --container-padding: 20px;
+        --section-padding: 10%;
+        --container-padding: 5%;
     }
 
     .hero-title {
@@ -2260,6 +2275,11 @@ section {
 
     .about-headline {
         font-size: 28px;
+    }
+
+    .about-grid {
+        padding: 0 5%;
+        gap: 8%;
     }
 
     .stat-number {
@@ -2309,7 +2329,7 @@ section {
     background: var(--glass-bg);
     border: 1px solid var(--glass-border);
     border-radius: 24px;
-    padding: 60px 50px;
+    padding: 4% 3.5%;
     max-width: 500px;
     width: 90%;
     text-align: center;
