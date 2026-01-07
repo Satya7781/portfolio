@@ -1,0 +1,2 @@
+when anyone send message so he get  the thank you response on my website itself don't change tab, he just get a pop up of thank you and he stays on the same site and cross check the functionalty of the form because i am not getting the mail the submisstions are visible on the formspree site but i am not getting the mails 
+

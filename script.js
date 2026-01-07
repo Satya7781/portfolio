@@ -422,50 +422,57 @@ class ProjectCards {
 // ========================================
 class ContactForm {
     constructor() {
-        this.form = document.querySelector('.contact-form');
+        this.form = document.querySelector('#contact-form');
     }
 
     init() {
         if (!this.form) return;
 
-        this.form.addEventListener('submit', (e) => {
+        this.form.addEventListener('submit', async (e) => {
             e.preventDefault();
 
-            const formData = new FormData(this.form);
-            const data = Object.fromEntries(formData);
-
-            // Simulate form submission
             const submitBtn = this.form.querySelector('.btn-primary');
             const originalText = submitBtn.innerHTML;
 
+            // Show loading state
             submitBtn.innerHTML = '<span class="btn-text">Sending...</span>';
             submitBtn.style.pointerEvents = 'none';
 
-            setTimeout(() => {
-                submitBtn.innerHTML = '<span class="btn-text">Message Sent!</span>';
-                this.form.reset();
+            try {
+                // Submit to Formspree via AJAX
+                const formData = new FormData(this.form);
+                const response = await fetch(this.form.action, {
+                    method: 'POST',
+                    body: formData,
+                    headers: {
+                        'Accept': 'application/json'
+                    }
+                });
+
+                if (response.ok) {
+                    // Show success modal
+                    showModal();
+
+                    // Reset form
+                    this.form.reset();
+
+                    // Reset button
+                    submitBtn.innerHTML = originalText;
+                    submitBtn.style.pointerEvents = 'auto';
+                } else {
+                    throw new Error('Form submission failed');
+                }
+            } catch (error) {
+                console.error('Error:', error);
+
+                // Show error message
+                submitBtn.innerHTML = '<span class="btn-text">Error! Try Again</span>';
 
                 setTimeout(() => {
                     submitBtn.innerHTML = originalText;
                     submitBtn.style.pointerEvents = 'auto';
-                }, 2000);
-            }, 1500);
-
-            // For production, replace with actual API call:
-            /*
-            fetch('/api/contact', {
-                method: 'POST',
-                headers: { 'Content-Type': 'application/json' },
-                body: JSON.stringify(data)
-            })
-            .then(response => response.json())
-            .then(data => {
-                // Handle success
-            })
-            .catch(error => {
-                // Handle error
-            });
-            */
+                }, 3000);
+            }
         });
 
         // Input animations
@@ -483,6 +490,32 @@ class ContactForm {
         });
     }
 }
+
+// Modal functions
+function showModal() {
+    const modal = document.getElementById('thankYouModal');
+    modal.classList.add('active');
+    document.body.style.overflow = 'hidden';
+}
+
+function closeModal() {
+    const modal = document.getElementById('thankYouModal');
+    modal.classList.remove('active');
+    document.body.style.overflow = 'auto';
+}
+
+// Close modal on overlay click
+document.addEventListener('DOMContentLoaded', () => {
+    const modal = document.getElementById('thankYouModal');
+    if (modal) {
+        modal.addEventListener('click', (e) => {
+            if (e.target === modal) {
+                closeModal();
+            }
+        });
+    }
+});
+
 
 // ========================================
 // PERFORMANCE OPTIMIZATION
