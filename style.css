@@ -8,10 +8,10 @@
    ======================================== */
 :root {
     /* Deep Luxury Colors */
-    --void-black: #050505;
-    --charcoal: #0a0a0a;
-    --surface-dark: #111111;
-    --surface-elevated: #1a1a1a;
+    --void-black: #07101a;
+    --charcoal: #0a1522;
+    --surface-dark: #0d1b2a;
+    --surface-elevated: #12263a;
 
     /* Accent Colors - Subtle Luxury */
     --champagne-gold: #d4af37;
@@ -58,7 +58,9 @@ html {
 
 body {
     font-family: var(--font-secondary);
-    background-color: var(--void-black);
+    background:
+        radial-gradient(circle at 8% 12%, rgba(74, 158, 255, 0.08), transparent 25%),
+        linear-gradient(180deg, #07101a 0%, #08131f 48%, #060c14 100%);
     color: var(--text-primary);
     line-height: 1.6;
     overflow-x: hidden;
@@ -67,31 +69,46 @@ body {
 }
 
 /* ========================================
-   NOISE TEXTURE OVERLAY
+   PROFESSIONAL AMBIENT BACKGROUND
    ======================================== */
-.noise-overlay {
+.site-background {
     position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="300" height="300"><filter id="noise"><feTurbulence type="fractalNoise" baseFrequency="0.9" numOctaves="4" stitchTiles="stitch"/></filter><rect width="100%" height="100%" filter="url(%23noise)" opacity="0.05"/></svg>');
+    inset: 0;
     pointer-events: none;
-    z-index: 9999;
-    opacity: 0.4;
-    mix-blend-mode: overlay;
+    overflow: hidden;
+    z-index: -2;
 }
 
-/* ========================================
-   3D CANVAS BACKGROUND
-   ======================================== */
-#webgl-canvas {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    z-index: -1;
+.site-background-grid {
+    position: absolute;
+    inset: 0;
+    opacity: 0.16;
+    background-image:
+        linear-gradient(rgba(167, 211, 245, 0.06) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(167, 211, 245, 0.06) 1px, transparent 1px);
+    background-size: 80px 80px;
+    mask-image: linear-gradient(to bottom, black, transparent 72%);
+}
+
+.site-background-glow {
+    position: absolute;
+    width: 560px;
+    height: 560px;
+    border-radius: 50%;
+    filter: blur(80px);
+    opacity: 0.16;
+}
+
+.site-background-glow-one {
+    top: 18%;
+    right: -180px;
+    background: #2f80ed;
+}
+
+.site-background-glow-two {
+    top: 58%;
+    left: -280px;
+    background: #0ea5a8;
 }
 
 /* ========================================
@@ -721,6 +738,16 @@ body {
 section {
     padding: var(--section-padding) 0;
     position: relative;
+}
+
+section:not(.hero-section):nth-of-type(even)::before {
+    content: '';
+    position: absolute;
+    inset: 8% 0;
+    z-index: -1;
+    border-top: 1px solid rgba(167, 211, 245, 0.06);
+    border-bottom: 1px solid rgba(167, 211, 245, 0.04);
+    background: rgba(10, 25, 40, 0.24);
 }
 
 .section-header {

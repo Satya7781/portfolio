@@ -53,9 +53,6 @@
     <!-- FontAwesome Icons -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 
-    <!-- Three.js for 3D -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js"></script>
-
     <!-- Styles -->
     <link rel="stylesheet" href="style.css">
 </head>
@@ -69,11 +66,12 @@
         </div>
     </div>
 
-    <!-- 3D Canvas Background -->
-    <canvas id="webgl-canvas"></canvas>
-
-    <!-- Noise Texture Overlay -->
-    <div class="noise-overlay"></div>
+    <!-- Lightweight visual background -->
+    <div class="site-background" aria-hidden="true">
+        <div class="site-background-glow site-background-glow-one"></div>
+        <div class="site-background-glow site-background-glow-two"></div>
+        <div class="site-background-grid"></div>
+    </div>
 
     <!-- Navigation -->
     <nav class="navbar">
