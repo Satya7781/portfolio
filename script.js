@@ -53,7 +53,11 @@
         if (projects) {
             projects.innerHTML = content.projects.map((project, index) => `
                 <article class="project-card reveal" tabindex="0" role="button" aria-label="Open case study: ${project.title}" data-project="${index}">
-                    <img class="project-image" src="${project.image}" alt="${project.title}" loading="lazy">
+                    <div class="project-preview" aria-hidden="true">
+                        <iframe src="${project.livePreview}" title="" loading="lazy" tabindex="-1" referrerpolicy="strict-origin-when-cross-origin"></iframe>
+                        <span class="preview-shade"></span>
+                        <span class="preview-label">Live hero preview ↗</span>
+                    </div>
                     <span class="project-number">${String(index + 1).padStart(2, '0')}</span>
                     <div class="project-content"><span class="project-category">${project.category}</span><h3>${project.title}</h3><p>${project.description}</p><span class="project-open">Open case study ↗</span></div>
                 </article>`).join('');
