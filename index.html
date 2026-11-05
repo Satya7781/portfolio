@@ -1,1067 +1,176 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Satya Chouhan | Full-Stack Developer</title>
-    <meta name="description"
-        content="Satya Chouhan is a full-stack developer building high-performance websites, web applications, and mobile-ready digital products for ambitious businesses.">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Satya Chouhan | Full-stack developer for growing businesses</title>
+    <meta name="description" content="Satya Chouhan is a full-stack developer who ships fast, reliable web and mobile-ready products for startups and growing businesses.">
     <meta name="author" content="Satya Chouhan">
-    <meta name="theme-color" content="#050505">
+    <meta name="theme-color" content="#07070a">
     <link rel="canonical" href="https://satyachouhan.me/">
-    <meta property="og:title" content="Satya Chouhan | Website & Mobile App Developer">
-    <meta property="og:description"
-        content="Full-stack developer building thoughtful websites, web applications, and digital products.">
+    <meta property="og:title" content="Satya Chouhan | Full-stack developer">
+    <meta property="og:description" content="Fast, reliable web products for startups and growing businesses.">
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://satyachouhan.me/">
-    <meta property="og:image" content="https://satyachouhan.me/assets/images/profile.jpg">
+    <meta property="og:image" content="https://satyachouhan.me/assets/images/profile.png">
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Satya Chouhan | Website & Mobile App Developer">
-    <meta name="twitter:description"
-        content="Full-stack developer building thoughtful websites, web applications, and digital products.">
-    <script type="application/ld+json">
-        {
-            "@context": "https://schema.org",
-            "@type": "Person",
-            "name": "Satya Chouhan",
-            "url": "https://satyachouhan.me/",
-            "jobTitle": "Full-Stack Developer",
-            "email": "mailto:satyachouhan778107@gmail.com",
-            "sameAs": [
-                "https://github.com/Satya7781",
-                "https://www.linkedin.com/in/satya-chouhan-68361232a"
-            ],
-            "knowsAbout": [
-                "Website Development",
-                "Mobile App Development",
-                "Full-Stack Development"
-            ]
-        }
-    </script>
-
-    <!-- Favicon -->
-    <link rel="icon" type="image/png" href="assets/images/favicon.png">
-
-    <!-- Google Fonts - Cinematic Typography -->
+    <link rel="icon" href="assets/images/favicon.png" type="image/png">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&family=Inter:wght@300;400;500;600;700;800;900&display=swap"
-        rel="stylesheet">
-
-    <!-- FontAwesome Icons -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
-
-    <!-- Styles -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": ["Person", "ProfessionalService"],
+      "name": "Satya Chouhan",
+      "url": "https://satyachouhan.me/",
+      "jobTitle": "Full-stack developer",
+      "email": "mailto:hello@satyachouhan.me",
+      "sameAs": ["https://github.com/Satya7781", "https://www.linkedin.com/in/satya-chouhan-68361232a"],
+      "knowsAbout": ["Web development", "Full-stack development", "Mobile-ready web apps"]
+    }
+    </script>
 </head>
-
 <body>
-    <!-- Preloader -->
-    <div class="preloader">
-        <div class="preloader-content">
-            <div class="preloader-line"></div>
-            <div class="preloader-counter">0%</div>
-        </div>
+    <div class="loader" id="loader" aria-label="Loading portfolio" role="status">
+        <div class="loader-mark">S<span>.</span></div>
+        <div class="loader-track"><span></span></div>
+        <span class="loader-value">0%</span>
     </div>
+    <div class="ambient" aria-hidden="true"><div class="ambient-grid"></div><div class="ambient-glow glow-a"></div><div class="ambient-glow glow-b"></div></div>
+    <div class="cursor" aria-hidden="true"><span></span></div>
+    <div class="progress" aria-hidden="true"></div>
 
-    <!-- Lightweight visual background -->
-    <div class="site-background" aria-hidden="true">
-        <div class="site-background-glow site-background-glow-one"></div>
-        <div class="site-background-glow site-background-glow-two"></div>
-        <div class="site-background-grid"></div>
-    </div>
+    <header class="site-header">
+        <nav class="nav shell" aria-label="Primary navigation">
+            <a class="brand" href="#hero" aria-label="Satya Chouhan home">SATYA<span>.</span></a>
+            <button class="menu-toggle" type="button" aria-expanded="false" aria-controls="primary-navigation"><span></span><span></span><span></span><b>Menu</b></button>
+            <div class="nav-panel" id="primary-navigation">
+                <a class="nav-link active" href="#work">Work</a>
+                <a class="nav-link" href="#services">Services</a>
+                <a class="nav-link" href="#process">Process</a>
+                <a class="nav-link" href="#about">About</a>
+                <a class="nav-link" href="#faq">FAQ</a>
+                <a class="nav-link" href="#contact">Contact</a>
+                <a class="button button-small button-accent nav-cta" data-booking href="#">Book a free call <span>↗</span></a>
+            </div>
+        </nav>
+    </header>
 
-    <!-- Navigation -->
-    <nav class="navbar">
-        <div class="nav-container">
-            <a href="#hero" class="logo">
-                <span class="logo-text">SATYA</span>
-                <span class="logo-dot">.</span>
-            </a>
-            <ul class="nav-links" id="primary-navigation">
-                <li><a href="#hero" class="nav-link active">Home</a></li>
-                <li><a href="#about" class="nav-link">About</a></li>
-                <li><a href="#services" class="nav-link">Services</a></li>
-                <li><a href="#skills" class="nav-link">Skills</a></li>
-                <li><a href="#projects" class="nav-link">Projects</a></li>
-                <li><a href="#achievements" class="nav-link">Achievements</a></li>
-                <li><a href="#contact" class="nav-link">Contact</a></li>
-            </ul>
-            <button class="menu-toggle" type="button" aria-label="Open navigation menu" aria-expanded="false"
-                aria-controls="primary-navigation">
-                <span></span>
-                <span></span>
-            </button>
-        </div>
-    </nav>
-
-    <!-- Scroll Progress -->
-    <div class="scroll-progress"></div>
-
-    <!-- Hero Section -->
-    <section id="hero" class="hero-section">
-        <div class="hero-background" aria-hidden="true">
-            <div class="hero-grid"></div>
-            <div class="hero-orb hero-orb-one"></div>
-            <div class="hero-orb hero-orb-two"></div>
-        </div>
-        <div class="hero-container">
-            <div class="hero-content">
-                <div class="hero-label" data-scroll-reveal>
-                    <span class="hero-label-status"></span>
-                    <span class="hero-label-text">AVAILABLE FOR SELECT PROJECTS</span>
+    <main>
+        <section class="hero section-shell" id="hero">
+            <canvas id="hero-canvas" aria-hidden="true"></canvas>
+            <div class="hero-content shell">
+                <div class="eyebrow reveal"><span class="eyebrow-dot"></span><span data-content="availability">Available for selected projects</span></div>
+                <h1 class="hero-title reveal">I build digital products that <em>move business forward.</em></h1>
+                <p class="hero-copy reveal">Full-stack developer who ships fast, reliable web and mobile-ready products for startups and growing businesses.</p>
+                <div class="hero-actions reveal">
+                    <a class="button button-accent magnetic" data-booking href="#">Book a free 20-min call <span>↗</span></a>
+                    <a class="button button-ghost" href="#work">View selected work <span>↓</span></a>
                 </div>
-
-                <h1 class="hero-title" data-scroll-reveal>
-                    <span class="hero-title-kicker">FULL-STACK DEVELOPER</span>
-                    <span class="hero-title-line">Digital products</span>
-                    <span class="hero-title-line hero-title-accent">built to perform.</span>
-                </h1>
-
-                <p class="hero-subtitle" data-scroll-reveal>
-                    I help ambitious businesses turn complex ideas into fast, reliable websites
-                    and mobile experiences that are ready for what comes next.
-                </p>
-
-                <div class="hero-cta" data-scroll-reveal>
-                    <a href="#contact" class="btn btn-primary">
-                        <span class="btn-text">Let's work together</span>
-                        <span class="btn-icon">→</span>
-                    </a>
-                    <a href="#projects" class="btn btn-secondary">
-                        <span class="btn-text">View selected work</span>
-                    </a>
+                <div class="trust-strip reveal">
+                    <span>Trusted for clear communication and dependable delivery</span>
+                    <span class="trust-divider"></span>
+                    <a href="https://github.com/Satya7781" target="_blank" rel="noopener">GitHub <span>↗</span></a>
+                    <a href="https://www.linkedin.com/in/satya-chouhan-68361232a" target="_blank" rel="noopener">LinkedIn <span>↗</span></a>
                 </div>
-                <div class="hero-service-pills" data-scroll-reveal>
-                    <span><i class="fas fa-layer-group"></i> Strategy to launch</span>
-                    <span><i class="fas fa-bolt"></i> Fast, thoughtful execution</span>
+                <div class="hero-meta reveal"><span>IST <strong id="india-time">--:--</strong></span><span>Overlap: EU mornings · US evenings</span></div>
+            </div>
+            <div class="hero-note">Scroll to explore <span>↓</span></div>
+            <div class="hero-coordinates" aria-hidden="true">23.2599° N<br>77.4126° E</div>
+        </section>
+
+        <section class="section-shell work-section" id="work">
+            <div class="shell">
+                <div class="section-heading reveal"><div><span class="kicker">01 / SaaS and creator tools</span><h2>Products that make<br><em>complex work clear.</em></h2></div><p>Selected dashboards, creator tools, and supporting websites built for startups and growing teams.</p></div>
+                <div class="project-grid" id="project-grid"></div>
+            </div>
+        </section>
+
+        <section class="section-shell services-section" id="services">
+            <div class="shell">
+                <div class="section-heading reveal"><div><span class="kicker">02 / SaaS and creator product delivery</span><h2>Clearer products.<br><em>Stronger launches.</em></h2></div><p>Choose the support that fits your startup stage. Every engagement starts with a clear scope and a shared definition of done.</p></div>
+                <div class="service-grid">
+                    <article class="service-card tilt-card reveal"><div class="card-index">01</div><div class="service-icon">↗</div><h3>SaaS dashboards</h3><p>Fast, understandable dashboards and web apps that help startup teams turn complex workflows into useful product experiences.</p><ul><li>Product strategy and UX flow</li><li>Frontend and backend development</li><li>Launch, analytics, and handover</li></ul><a href="#contact" class="text-link">Discuss a dashboard <span>↗</span></a></article>
+                    <article class="service-card service-featured tilt-card reveal"><div class="card-index">02</div><div class="service-icon">✦</div><h3>Creator tools</h3><p>Creator-focused products that make planning, publishing, and growing an audience easier across real devices.</p><ul><li>Creator workflows and product UX</li><li>Responsive and mobile-ready builds</li><li>Performance and release support</li></ul><a href="#contact" class="text-link">Discuss your creator product <span>↗</span></a></article>
+                </div>
+                <div class="engagements reveal"><div class="engagement-intro"><span class="kicker">Engagement models</span><h3>Simple ways to work together.</h3></div><div class="engagement-list" id="engagement-list"></div></div>
+                <div class="payment-block reveal"><span class="kicker">How payment works</span><p>Accepted methods: Wise, Payoneer, PayPal, or Stripe. Standard milestone structure: <strong>40 / 30 / 30</strong>. NDA and contract available on request. Invoices are issued in USD.</p></div>
+            </div>
+        </section>
+
+        <section class="section-shell process-section" id="process">
+            <div class="shell">
+                <div class="section-heading reveal"><div><span class="kicker">03 / How I work</span><h2>A clear path from<br><em>idea to launch.</em></h2></div><p>Good work is easier when the process is visible. You will always know what is happening, what comes next, and where decisions matter.</p></div>
+                <div class="process-list">
+                    <article class="process-row reveal"><span>01</span><div><h3>Discover</h3><p>We clarify the goal, audience, constraints, and the smallest useful version of the product.</p></div><i>⌁</i></article>
+                    <article class="process-row reveal"><span>02</span><div><h3>Plan and design</h3><p>I turn the brief into an understandable structure, interface direction, and delivery plan.</p></div><i>⌁</i></article>
+                    <article class="process-row reveal"><span>03</span><div><h3>Build and share</h3><p>Development happens in visible steps, with practical updates and working milestones.</p></div><i>⌁</i></article>
+                    <article class="process-row reveal"><span>04</span><div><h3>Test and launch</h3><p>We check the experience on real screens, resolve the rough edges, and launch with confidence.</p></div><i>⌁</i></article>
                 </div>
             </div>
+        </section>
 
-            <div class="hero-visual" data-scroll-reveal>
-                <div class="hero-card-glow"></div>
-                <div class="hero-profile-card">
-                    <div class="hero-profile-top">
-                        <span class="hero-card-label">SATYA CHOUHAN</span>
-                        <span class="hero-card-index">01 / 04</span>
-                    </div>
-                    <div class="hero-profile-image-wrap">
-                        <img src="assets/images/profile.jpg" alt="Satya Chouhan" class="hero-profile-image">
-                        <span class="hero-profile-badge"><i class="fas fa-check"></i> Open to work</span>
-                    </div>
-                    <div class="hero-profile-footer">
-                        <div>
-                            <strong>Websites & apps</strong>
-                            <span>Designed for real-world impact.</span>
-                        </div>
-                        <span class="hero-card-arrow">↗</span>
-                    </div>
-                </div>
-                <div class="hero-float-stat hero-float-stat-one">
-                    <strong>04+</strong>
-                    <span>years building</span>
-                </div>
-                <div class="hero-float-stat hero-float-stat-two">
-                    <span class="hero-stat-dot"></span>
-                    <span>Remote · India</span>
+        <section class="section-shell proof-section" id="proof">
+            <div class="shell">
+                <div class="section-heading reveal"><div><span class="kicker">04 / Client confidence</span><h2>Clarity builds<br><em>trust.</em></h2></div><p>Real testimonials and client locations will appear here as they are collected. No invented proof.</p></div>
+                <div class="testimonial-grid" id="testimonial-grid"></div>
+                <div class="client-strip reveal"><span>Worked with clients in</span><strong data-content="countries">TODO: add client countries</strong><span class="strip-line"></span><a href="https://github.com/Satya7781" target="_blank" rel="noopener">Open GitHub ↗</a><a href="https://www.linkedin.com/in/satya-chouhan-68361232a" target="_blank" rel="noopener">Connect on LinkedIn ↗</a></div>
+            </div>
+        </section>
+
+        <section class="section-shell stack-section" id="stack">
+            <div class="shell">
+                <div class="section-heading reveal"><div><span class="kicker">05 / Stack I ship with</span><h2>The right tools for<br><em>the job.</em></h2></div><p>Technology choices stay connected to the product. Explore the stack by the type of work it supports.</p></div>
+                <div class="stack-layout">
+                    <div class="stack-orbit-wrap reveal"><div class="stack-orbit" id="stack-orbit"><span class="orbit-core">STACK<br><small>01</small></span></div></div>
+                    <div class="stack-groups" id="stack-groups"></div>
                 </div>
             </div>
+        </section>
 
-            <!-- Scroll Indicator -->
-            <div class="scroll-indicator" data-scroll-reveal>
-                <div class="scroll-indicator-line"></div>
-                <span class="scroll-indicator-text">SCROLL</span>
+        <section class="section-shell about-section" id="about">
+            <div class="shell about-layout">
+                <div class="about-photo reveal"><img src="assets/images/profile.png" alt="Satya Chouhan" loading="lazy"><span class="photo-caption">Based in Bhopal, India</span></div>
+                <div class="about-copy reveal"><span class="kicker">06 / A little about me</span><h2>A developer who keeps<br><em>the goal in view.</em></h2><p>I help teams turn rough ideas into useful digital products. My role covers the practical details: understanding the problem, making decisions visible, writing maintainable code, and getting the product into users’ hands.</p><p>I work remotely from India and communicate in clear, regular updates. <span data-content="education">B.Tech in Computer Science</span></p><div class="about-stats"><div><strong data-content="years">TODO</strong><span>years experience</span></div><div><strong data-content="projectsCount">TODO</strong><span>projects shipped</span></div><div><strong data-content="clientCount">TODO</strong><span>client projects</span></div></div></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Working Together Section -->
-    <section id="process" class="process-section">
-        <div class="process-container">
-            <div class="section-header" data-scroll-reveal>
-                <span class="section-label">HOW WE WORK</span>
-                <h2 class="section-title">A clear path from<br><span class="text-gradient">idea to launch.</span></h2>
+        <section class="section-shell achievements-section" id="achievements">
+            <div class="shell">
+                <div class="section-heading reveal"><div><span class="kicker">07 / Milestones</span><h2>Progress you can<br><em>build on.</em></h2></div><p>A compact record of shipped work and learning milestones. Numbers are only used where they are verified.</p></div>
+                <div class="achievement-grid"><div class="achievement-card reveal"><span class="achievement-icon">✦</span><strong data-content="hackathons">TODO</strong><h3>Hackathon placements</h3><p>Verified placements and recognitions will be added here.</p></div><div class="achievement-card reveal"><span class="achievement-icon">↗</span><strong data-content="projectsCount">TODO</strong><h3>Projects shipped</h3><p>Replace this placeholder with the real count in content.js.</p></div><div class="achievement-card reveal"><span class="achievement-icon">◎</span><strong>24h</strong><h3>Typical reply</h3><p>Clear communication across time zones and working hours.</p></div></div>
             </div>
-            <div class="process-grid">
-                <div class="process-step" data-scroll-reveal><span>01</span><i class="fas fa-compass"></i><h3>Discovery</h3><p>Understand your goals, users, requirements, and what success should look like.</p></div>
-                <div class="process-step" data-scroll-reveal><span>02</span><i class="fas fa-pen-ruler"></i><h3>Plan & Design</h3><p>Shape the product architecture, user experience, interface, and delivery plan.</p></div>
-                <div class="process-step" data-scroll-reveal><span>03</span><i class="fas fa-code"></i><h3>Development</h3><p>Build the right solution with maintainable code and regular progress updates.</p></div>
-                <div class="process-step" data-scroll-reveal><span>04</span><i class="fas fa-vial"></i><h3>Test</h3><p>Check functionality, responsiveness, performance, and usability before release.</p></div>
-                <div class="process-step" data-scroll-reveal><span>05</span><i class="fas fa-rocket"></i><h3>Launch</h3><p>Prepare the finished product for launch and help you move confidently forward.</p></div>
+        </section>
+
+        <section class="section-shell faq-section" id="faq">
+            <div class="shell faq-layout">
+                <div class="section-heading reveal"><div><span class="kicker">08 / FAQ</span><h2>Good questions<br><em>deserve clear answers.</em></h2></div><p>Still unsure? <a class="inline-link" href="#contact">Send me a message</a> and I will answer directly.</p></div>
+                <div class="faq-list" id="faq-list"></div>
             </div>
-        </div>
-    </section>
+        </section>
 
-    <!-- Why Work With Me Section -->
-    <section id="approach" class="approach-section">
-        <div class="approach-container">
-            <div class="section-header" data-scroll-reveal>
-                <span class="section-label">THE DIFFERENCE</span>
-                <h2 class="section-title">Technology should serve<br><span class="text-gradient">the outcome.</span></h2>
-            </div>
-            <div class="approach-grid">
-                <div class="approach-card" data-scroll-reveal><i class="fas fa-arrows-to-circle"></i><h3>Business-aware builds</h3><p>I start with the problem and the people using the product, not just the technology.</p></div>
-                <div class="approach-card" data-scroll-reveal><i class="fas fa-expand"></i><h3>Built to grow</h3><p>Clean structure and sensible choices make it easier to improve the product over time.</p></div>
-                <div class="approach-card" data-scroll-reveal><i class="fas fa-mobile-screen"></i><h3>Responsive by default</h3><p>Every experience is shaped for real screens, real users, and real-world conditions.</p></div>
-                <div class="approach-card" data-scroll-reveal><i class="fas fa-comments"></i><h3>Clear communication</h3><p>Expect an understandable process, honest trade-offs, and consistent communication.</p></div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Services Section -->
-    <section id="services" class="services-section">
-        <div class="services-container">
-            <div class="section-header" data-scroll-reveal>
-                <span class="section-label">WHAT I BUILD</span>
-                <h2 class="section-title">From first idea to<br><span class="text-gradient">shipped product.</span></h2>
-                <p class="section-subtitle">Practical, thoughtful digital solutions for businesses, startups, and founders.</p>
-            </div>
-            <div class="services-grid">
-                <article class="service-card" data-scroll-reveal>
-                    <div class="service-card-top">
-                        <span class="service-number">01</span>
-                        <div class="service-icon"><i class="fas fa-globe"></i></div>
-                    </div>
-                    <h3>Website Development</h3>
-                    <p>Fast, responsive websites and web applications that make your offer clear and your business easier to use.</p>
-                    <ul>
-                        <li>Business websites & landing pages</li>
-                        <li>SaaS platforms & custom web apps</li>
-                        <li>E-commerce, dashboards & admin panels</li>
-                    </ul>
-                    <a href="#contact" class="text-link">Discuss a web project <span>→</span></a>
-                </article>
-                <article class="service-card service-card-featured" data-scroll-reveal>
-                    <div class="service-card-top">
-                        <span class="service-number">02</span>
-                        <div class="service-icon"><i class="fas fa-mobile-screen-button"></i></div>
-                    </div>
-                    <h3>Mobile App Development</h3>
-                    <p>Useful mobile experiences designed around real user needs, from an early product idea to a dependable release.</p>
-                    <ul>
-                        <li>Android and iOS applications</li>
-                        <li>Cross-platform product builds</li>
-                        <li>Business and startup mobile solutions</li>
-                    </ul>
-                    <a href="#contact" class="text-link">Discuss a mobile project <span>→</span></a>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- About Section -->
-    <section id="about" class="about-section">
-        <div class="about-container">
-            <div class="section-header" data-scroll-reveal>
-                <span class="section-label">WHO I AM</span>
-                <h2 class="section-title">About Me</h2>
-            </div>
-
-            <div class="about-grid">
-                <!-- Left Column: Profile Card -->
-                <div class="about-profile-wrapper" data-scroll-reveal>
-                    <div class="profile-card">
-                        <div class="profile-image-container">
-                            <div class="profile-image-glow"></div>
-                            <img src="assets/images/profile.jpg" alt="Satya Chouhan" class="profile-image-real">
-                        </div>
-                        <h3 class="profile-name">Satya Chouhan</h3>
-                        <p class="profile-role">Full-Stack Developer</p>
-                        <div class="profile-social">
-                            <a href="https://github.com/Satya7781" target="_blank" class="social-btn"><i
-                                    class="fab fa-github"></i></a>
-                            <a href="https://www.linkedin.com/in/satya-chouhan-68361232a" target="_blank" rel="noopener noreferrer" class="social-btn"><i
-                                    class="fab fa-linkedin-in"></i></a>
-                            <a href="mailto:satyachouhan778107@gmail.com" class="social-btn"><i class="fas fa-envelope"></i></a>
-                        </div>
-                        <div class="profile-location">
-                            <i class="fas fa-map-marker-alt"></i>
-                            <span>India</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Right Column: Bio & Stats -->
-                <div class="about-bio" data-scroll-reveal>
-                    <div class="about-badge">
-                        <span class="badge-icon"><i class="fas fa-code"></i></span>
-                        <span class="badge-text">Vibe Coder</span>
-                    </div>
-
-                    <h3 class="about-headline">Turning Complex Ideas Into <span class="text-gradient">Elegant
-                            Reality</span></h3>
-
-                    <div class="about-text-content">
-                        <p>
-                            I'm a <strong>Computer Science student</strong> (B.Tech, Class of 2026) driven by the thrill
-                            of creation. I don't just write code; I engineer experiences. From high-performance
-                            real-time systems to pixel-perfect user interfaces, I obsess over every detail.
-                        </p>
-                        <p>
-                            My philosophy is simple: <strong>Build things that matter.</strong> Whether it's a
-                            collaborative tool for developers or an AI-powered educational platform, I aim to solve real
-                            problems with clean, scalable, and efficient code.
-                        </p>
-                    </div>
-
-                    <div class="about-stats-enhanced">
-                        <div class="stat-item">
-                            <div class="stat-icon"><i class="fas fa-project-diagram"></i></div>
-                            <div class="stat-info">
-                                <span class="stat-value">15+</span>
-                                <span class="stat-label">Projects Shipped</span>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-icon"><i class="fas fa-layer-group"></i></div>
-                            <div class="stat-info">
-                                <span class="stat-value">20+</span>
-                                <span class="stat-label">Tech Stack</span>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-icon"><i class="fas fa-trophy"></i></div>
-                            <div class="stat-info">
-                                <span class="stat-value">4</span>
-                                <span class="stat-label">Hackathon Wins</span>
-                            </div>
-                        </div>
-                        <div class="stat-item">
-                            <div class="stat-icon"><i class="fas fa-code-branch"></i></div>
-                            <div class="stat-info">
-                                <span class="stat-value">2+</span>
-                                <span class="stat-label">Years Exp.</span>
-                            </div>
-                        </div>
-                    </div>
+        <section class="section-shell contact-section" id="contact">
+            <div class="shell">
+                <div class="contact-banner reveal"><span class="kicker">09 / Start a conversation</span><h2>Have a SaaS or creator<br><em>product to build?</em></h2><p>Tell me what you are trying to make. I will reply with useful next steps, not a generic sales message.</p><div class="contact-actions"><a class="button button-accent magnetic" data-booking href="#">Book a free 20-min call <span>↗</span></a><a class="button button-ghost capability-link" data-capability href="#">Download one-page overview <span>↓</span></a></div></div>
+                <div class="contact-grid">
+                    <div class="contact-details reveal"><span class="kicker">Prefer email?</span><a class="contact-email" data-content="professionalEmail" href="mailto:hello@satyachouhan.me">hello@satyachouhan.me</a><p>Based in India (IST, UTC+5:30). Comfortable overlapping with US EST/PST evenings and EU mornings. Typical reply within 24 hours.</p><div class="contact-links"><a href="https://github.com/Satya7781" target="_blank" rel="noopener">GitHub ↗</a><a href="https://www.linkedin.com/in/satya-chouhan-68361232a" target="_blank" rel="noopener">LinkedIn ↗</a></div></div>
+                    <form class="contact-form reveal" id="contact-form" action="https://formspree.io/f/mkogladz" method="POST" novalidate><div class="form-row"><label> <span>Name</span><input name="name" required autocomplete="name"></label><label><span>Email</span><input name="email" type="email" required autocomplete="email"></label></div><label><span>What are you building?</span><textarea name="message" rows="5" required></textarea></label><div class="honeypot" aria-hidden="true"><label>Website<input name="_gotcha" tabindex="-1" autocomplete="off"></label></div><div class="turnstile-slot" id="turnstile-slot" aria-label="Spam protection"></div><button class="button button-accent" type="submit">Send message <span>↗</span></button><p class="form-status" id="form-status" role="status" aria-live="polite"></p></form>
                 </div>
             </div>
-        </div>
-    </section>
+        </section>
+        <section class="video-section section-shell" id="intro-video"><div class="shell video-card reveal"><div><span class="kicker">A quick introduction</span><h2>See how I think<br><em>about products.</em></h2><p>TODO: add a short introduction video URL. A captioned 45–60 second walkthrough can help clients understand how you work before the first call.</p></div><div class="video-placeholder" aria-label="Introduction video placeholder"><span>▶</span><small>TODO: add video URL and poster image</small></div></div></section>
+    </main>
 
-    <!-- Skills Section -->
-    <section id="skills" class="skills-section">
-        <div class="skills-container">
-            <div class="section-header" data-scroll-reveal>
-                <span class="section-label">TECH STACK</span>
-                <h2 class="section-title">Skills & Technologies</h2>
-                <p class="section-subtitle">Tools I use to build exceptional digital experiences</p>
-            </div>
+    <footer class="footer"><div class="shell footer-inner"><a class="brand" href="#hero">SATYA<span>.</span></a><p>Built for SaaS dashboards and creator tools.</p><span>© <span id="current-year"></span> Satya Chouhan · <a href="privacy.html">Privacy</a></span></div></footer>
+    <dialog class="case-modal" id="case-modal"><button class="modal-close" type="button" aria-label="Close case study">×</button><div id="case-modal-content"></div></dialog>
+    <aside class="cookie-notice" id="cookie-notice" aria-label="Privacy notice"><span>This site uses only essential storage and no advertising cookies. <a href="privacy.html">Read the privacy policy</a>.</span><button type="button" id="cookie-dismiss">Got it</button></aside>
 
-            <!-- Proficiency Bars -->
-            <div class="proficiency-section" data-scroll-reveal>
-                <h3 class="proficiency-title">Core Competencies</h3>
-                <div class="proficiency-grid">
-                    <div class="proficiency-item">
-                        <div class="proficiency-header">
-                            <span class="proficiency-name">Full-Stack Development</span>
-                            <span class="proficiency-percent">90%</span>
-                        </div>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 90%"></div>
-                        </div>
-                    </div>
-                    <div class="proficiency-item">
-                        <div class="proficiency-header">
-                            <span class="proficiency-name">React & JavaScript</span>
-                            <span class="proficiency-percent">85%</span>
-                        </div>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 85%"></div>
-                        </div>
-                    </div>
-                    <div class="proficiency-item">
-                        <div class="proficiency-header">
-                            <span class="proficiency-name">Backend (Node.js, Python)</span>
-                            <span class="proficiency-percent">80%</span>
-                        </div>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 80%"></div>
-                        </div>
-                    </div>
-                    <div class="proficiency-item">
-                        <div class="proficiency-header">
-                            <span class="proficiency-name">Database Design</span>
-                            <span class="proficiency-percent">75%</span>
-                        </div>
-                        <div class="proficiency-bar">
-                            <div class="proficiency-fill" style="width: 75%"></div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Tech Stack Grid - Enhanced -->
-            <div class="tech-stack-grid-enhanced">
-                <!-- Frontend -->
-                <div class="tech-category-enhanced" data-scroll-reveal>
-                    <div class="tech-category-header">
-                        <div class="tech-category-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5" stroke-width="2"
-                                    stroke-linecap="round" stroke-linejoin="round" />
-                            </svg>
-                        </div>
-                        <h3>Frontend Development</h3>
-                    </div>
-                    <div class="tech-items-grid">
-                        <div class="tech-badge" data-tech="html">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #e34c26, #f06529);">
-                                <i class="fab fa-html5"></i>
-                            </div>
-                            <span class="tech-badge-name">HTML5</span>
-                        </div>
-                        <div class="tech-badge" data-tech="css">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #264de4, #2965f1);">
-                                <i class="fab fa-css3-alt"></i>
-                            </div>
-                            <span class="tech-badge-name">CSS3</span>
-                        </div>
-                        <div class="tech-badge" data-tech="js">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #f0db4f, #f7df1e);">
-                                <i class="fab fa-js" style="color: #000;"></i>
-                            </div>
-                            <span class="tech-badge-name">JavaScript</span>
-                        </div>
-                        <div class="tech-badge" data-tech="react">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #61dafb, #00d8ff);">
-                                <i class="fab fa-react" style="color: #000;"></i>
-                            </div>
-                            <span class="tech-badge-name">React.js</span>
-                        </div>
-                        <div class="tech-badge" data-tech="ts">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #3178c6, #235a97);">
-                                <i class="fab fa-js-square"></i>
-                            </div>
-                            <span class="tech-badge-name">TypeScript</span>
-                        </div>
-                        <div class="tech-badge" data-tech="tailwind">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #06b6d4, #0891b2);">
-                                <i class="fas fa-wind"></i>
-                            </div>
-                            <span class="tech-badge-name">Tailwind</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Backend -->
-                <div class="tech-category-enhanced" data-scroll-reveal>
-                    <div class="tech-category-header">
-                        <div class="tech-category-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <rect x="2" y="3" width="20" height="14" rx="2" stroke-width="2" />
-                                <path d="M8 21h8M12 17v4" stroke-width="2" stroke-linecap="round" />
-                            </svg>
-                        </div>
-                        <h3>Backend Development</h3>
-                    </div>
-                    <div class="tech-items-grid">
-                        <div class="tech-badge" data-tech="node">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #68a063, #539e4e);">
-                                <i class="fab fa-node-js"></i>
-                            </div>
-                            <span class="tech-badge-name">Node.js</span>
-                        </div>
-                        <div class="tech-badge" data-tech="express">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #444, #000);">
-                                <i class="fas fa-server"></i>
-                            </div>
-                            <span class="tech-badge-name">Express</span>
-                        </div>
-                        <div class="tech-badge" data-tech="python">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #3776ab, #ffd43b);">
-                                <i class="fab fa-python"></i>
-                            </div>
-                            <span class="tech-badge-name">Python</span>
-                        </div>
-                        <div class="tech-badge" data-tech="django">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #092e20, #0c4b33);">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <span class="tech-badge-name">Django</span>
-                        </div>
-                        <div class="tech-badge" data-tech="java">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #f89820, #e76f00);">
-                                <i class="fab fa-java"></i>
-                            </div>
-                            <span class="tech-badge-name">Java</span>
-                        </div>
-                        <div class="tech-badge" data-tech="cpp">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #00599c, #004482);">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <span class="tech-badge-name">C/C++</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Database & Tools -->
-                <div class="tech-category-enhanced" data-scroll-reveal>
-                    <div class="tech-category-header">
-                        <div class="tech-category-icon">
-                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor">
-                                <ellipse cx="12" cy="5" rx="9" ry="3" stroke-width="2" />
-                                <path d="M3 5v14c0 1.66 4 3 9 3s9-1.34 9-3V5" stroke-width="2" />
-                                <path d="M3 12c0 1.66 4 3 9 3s9-1.34 9-3" stroke-width="2" />
-                            </svg>
-                        </div>
-                        <h3>Database & Tools</h3>
-                    </div>
-                    <div class="tech-items-grid">
-                        <div class="tech-badge" data-tech="mongo">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #47a248, #3f9142);">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <span class="tech-badge-name">MongoDB</span>
-                        </div>
-                        <div class="tech-badge" data-tech="mysql">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #00758f, #005f73);">
-                                <i class="fas fa-database"></i>
-                            </div>
-                            <span class="tech-badge-name">MySQL</span>
-                        </div>
-                        <div class="tech-badge" data-tech="git">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #f05032, #e84e31);">
-                                <i class="fab fa-git-alt"></i>
-                            </div>
-                            <span class="tech-badge-name">Git</span>
-                        </div>
-                        <div class="tech-badge" data-tech="docker">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #2496ed, #1d7fc5);">
-                                <i class="fab fa-docker"></i>
-                            </div>
-                            <span class="tech-badge-name">Docker</span>
-                        </div>
-                        <div class="tech-badge" data-tech="figma">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #f24e1e, #ff7262);">
-                                <i class="fab fa-figma"></i>
-                            </div>
-                            <span class="tech-badge-name">Figma</span>
-                        </div>
-                        <div class="tech-badge" data-tech="vscode">
-                            <div class="tech-badge-icon" style="background: linear-gradient(135deg, #007acc, #005a9e);">
-                                <i class="fas fa-code"></i>
-                            </div>
-                            <span class="tech-badge-name">VS Code</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Projects Section -->
-    <section id="projects" class="projects-section">
-        <div class="projects-container">
-            <div class="section-header" data-scroll-reveal>
-                <span class="section-label">PORTFOLIO</span>
-                <h2 class="section-title">Featured Projects</h2>
-                <p class="section-subtitle">Real-world applications built with modern technologies</p>
-            </div>
-
-            <div class="projects-showcase">
-                <!-- Project 1 -->
-                <article class="project-showcase-item" data-scroll-reveal>
-                    <div class="project-visual">
-                        <div class="project-visual-inner">
-                            <div class="project-visual-overlay"></div>
-                            <img src="assets/images/projects/code-editor.png" alt="Real-Time Code Editor"
-                                class="project-image-real">
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <div class="project-number-large">01</div>
-                        <h3 class="project-title-large">Real-Time Collaborative Code Editor</h3>
-                        <div class="project-meta">
-                            <span class="project-type"><i class="fas fa-laptop-code"></i> Full-Stack</span>
-                            <span class="project-separator">•</span>
-                            <span class="project-type"><i class="fas fa-network-wired"></i> WebRTC</span>
-                        </div>
-                        <p class="project-desc-large">
-                            Built a collaborative coding platform where multiple developers can write, edit, and debug
-                            code together in real-time—with integrated video calling for seamless communication. Think
-                            Google Docs, but for code.
-                        </p>
-                        <div class="project-impact-box">
-                            <i class="fas fa-chart-line"></i>
-                            <span><strong>Impact:</strong> Enables remote pair programming with zero latency. Used by
-                                50+ beta testers for hackathons.</span>
-                        </div>
-                        <div class="project-tech-stack">
-                            <span class="tech-pill"><i class="fab fa-react"></i> React.js</span>
-                            <span class="tech-pill"><i class="fas fa-plug"></i> WebSockets</span>
-                            <span class="tech-pill"><i class="fab fa-node-js"></i> Node.js</span>
-                            <span class="tech-pill"><i class="fas fa-video"></i> WebRTC</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Satya7781/Realtime_code_editor" target="_blank"
-                                class="btn btn-primary btn-sm">
-                                <span class="btn-text">View Code</span>
-                                <span class="btn-icon"><i class="fab fa-github"></i></span>
-                            </a>
-
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project 2 -->
-                <article class="project-showcase-item" data-scroll-reveal>
-                    <div class="project-visual">
-                        <div class="project-visual-inner">
-                            <div class="project-visual-overlay"></div>
-                            <img src="assets/images/projects/pdf-reader.png" alt="Interactive PDF Reader"
-                                class="project-image-real">
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <div class="project-number-large">02</div>
-                        <h3 class="project-title-large">Interactive PDF Reader</h3>
-                        <div class="project-meta">
-                            <span class="project-type"><i class="fab fa-adobe"></i> Adobe Hackathon</span>
-                            <span class="project-separator">•</span>
-                            <span class="project-type"><i class="fas fa-cogs"></i> API Integration</span>
-                        </div>
-                        <p class="project-desc-large">
-                            Competed in Adobe's <em>Connecting the Dots</em> challenge by building an interactive PDF
-                            reader using Adobe's PDF Embed API. Focused on creating a smooth, distraction-free reading
-                            experience with smart navigation.
-                        </p>
-                        <div class="project-impact-box">
-                            <i class="fas fa-trophy"></i>
-                            <span><strong>Outcome:</strong> Selected for second round. Delivered a functional prototype
-                                in 48 hours using enterprise-grade APIs.</span>
-                        </div>
-                        <div class="project-tech-stack">
-                            <span class="tech-pill"><i class="fab fa-js"></i> JavaScript</span>
-                            <span class="tech-pill"><i class="fas fa-file-alt"></i> Adobe PDF API</span>
-                            <span class="tech-pill"><i class="fab fa-html5"></i> HTML5</span>
-                            <span class="tech-pill"><i class="fab fa-css3-alt"></i> CSS3</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="https://github.com/Satya7781/mejor-1-PDF-Analyzer" target="_blank"
-                                class="btn btn-primary btn-sm">
-                                <span class="btn-text">View Code</span>
-                                <span class="btn-icon"><i class="fab fa-github"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-
-                <!-- Project 3 -->
-                <article class="project-showcase-item" data-scroll-reveal>
-                    <div class="project-visual">
-                        <div class="project-visual-inner">
-                            <div class="project-visual-overlay"></div>
-                            <img src="assets/images/projects/discussion-platform.png" alt="Group Discussion Platform"
-                                class="project-image-real">
-                        </div>
-                    </div>
-                    <div class="project-details">
-                        <div class="project-number-large">03</div>
-                        <h3 class="project-title-large">Group Discussion Platform</h3>
-                        <div class="project-meta">
-                            <span class="project-type"><i class="fas fa-globe"></i> Web App</span>
-                            <span class="project-separator">•</span>
-                            <span class="project-type"><i class="fas fa-clock"></i> Real-Time</span>
-                        </div>
-                        <p class="project-desc-large">
-                            Created a web-based platform for structured group discussions—designed for remote teams,
-                            interview prep, and collaborative brainstorming. Built with simplicity and speed in mind.
-                        </p>
-                        <div class="project-impact-box">
-                            <i class="fas fa-users"></i>
-                            <span><strong>Use Case:</strong> Helps students practice for group discussions and teams run
-                                async brainstorming sessions.</span>
-                        </div>
-                        <div class="project-tech-stack">
-                            <span class="tech-pill"><i class="fab fa-html5"></i> HTML5</span>
-                            <span class="tech-pill"><i class="fab fa-css3-alt"></i> CSS3</span>
-                            <span class="tech-pill"><i class="fab fa-js"></i> JavaScript</span>
-                            <span class="tech-pill"><i class="fas fa-server"></i> Backend APIs</span>
-                        </div>
-                        <div class="project-actions">
-                            <a href="#" class="btn btn-secondary btn-sm disabled">
-                                <span class="btn-text">Coming Soon</span>
-                                <span class="btn-icon"><i class="fas fa-hourglass-half"></i></span>
-                            </a>
-                        </div>
-                    </div>
-                </article>
-            </div>
-
-            <div class="freelance-work-header" data-scroll-reveal>
-                <div>
-                    <span class="section-label">CLIENT WORK</span>
-                    <h3>Freelance projects</h3>
-                </div>
-                <p>Selected live websites built for people, communities, and digital-first products.</p>
-            </div>
-
-            <div class="freelance-project-grid">
-                <article class="freelance-project-card freelance-project-pramod" data-scroll-reveal>
-                    <a href="https://pramodrajput.co.in" target="_blank" rel="noopener noreferrer"
-                        class="freelance-project-visual" aria-label="Visit Pramod Rajput website">
-                        <span class="freelance-project-mark">PR</span>
-                        <span class="freelance-project-arrow">↗</span>
-                    </a>
-                    <div class="freelance-project-content">
-                        <div class="freelance-project-meta">
-                            <span>Freelance project</span>
-                            <span>Personal brand</span>
-                        </div>
-                        <h4>Pramod Rajput</h4>
-                        <p>A personal digital presence built around a clear, memorable Hindi-first message and identity.</p>
-                        <a href="https://pramodrajput.co.in" target="_blank" rel="noopener noreferrer"
-                            class="text-link">Visit live site <span>↗</span></a>
-                    </div>
-                </article>
-
-                <article class="freelance-project-card freelance-project-kmrgp" data-scroll-reveal>
-                    <a href="https://kmrgp.com" target="_blank" rel="noopener noreferrer"
-                        class="freelance-project-visual" aria-label="Visit Kshatriya Mewada Rajput Parivar website">
-                        <span class="freelance-project-mark">KMRP</span>
-                        <span class="freelance-project-arrow">↗</span>
-                    </a>
-                    <div class="freelance-project-content">
-                        <div class="freelance-project-meta">
-                            <span>Freelance project</span>
-                            <span>Community website</span>
-                        </div>
-                        <h4>Kshatriya Mewada Rajput Parivar</h4>
-                        <p>A community-focused web presence for Kshatriya Mewada Rajput Parivar and its shared identity.</p>
-                        <a href="https://kmrgp.com" target="_blank" rel="noopener noreferrer"
-                            class="text-link">Visit live site <span>↗</span></a>
-                    </div>
-                </article>
-
-                <article class="freelance-project-card freelance-project-you2stream" data-scroll-reveal>
-                    <a href="https://you2stream.com" target="_blank" rel="noopener noreferrer"
-                        class="freelance-project-visual" aria-label="Visit You2Stream website">
-                        <span class="freelance-project-mark">Y2S</span>
-                        <span class="freelance-project-arrow">↗</span>
-                    </a>
-                    <div class="freelance-project-content">
-                        <div class="freelance-project-meta">
-                            <span>Freelance project</span>
-                            <span>Creator product</span>
-                        </div>
-                        <h4>You2Stream</h4>
-                        <p>A creator-first product website focused on simple, fast tools for YouTube livestream growth.</p>
-                        <a href="https://you2stream.com" target="_blank" rel="noopener noreferrer"
-                            class="text-link">Visit live site <span>↗</span></a>
-                    </div>
-                </article>
-            </div>
-        </div>
-    </section>
-
-    <!-- Testimonials Section -->
-    <section id="testimonials" class="testimonials-section">
-        <div class="testimonials-container">
-            <div class="section-header" data-scroll-reveal>
-                <span class="section-label">TRUST & TRANSPARENCY</span>
-                <h2 class="section-title">Let the work<br><span class="text-gradient">speak for itself.</span></h2>
-                <p class="section-subtitle">Verified client feedback will live here as projects are delivered. For now, explore the work and connect directly.</p>
-            </div>
-            <div class="proof-card" data-scroll-reveal>
-                <i class="fas fa-quote-left"></i>
-                <p>Looking for a developer? Browse the project work, review the code, or start a conversation about what you are building.</p>
-                <div class="proof-links">
-                    <a href="https://github.com/Satya7781" target="_blank" rel="noopener noreferrer" class="text-link">View GitHub <span>↗</span></a>
-                    <a href="https://www.linkedin.com/in/satya-chouhan-68361232a" target="_blank" rel="noopener noreferrer" class="text-link">Connect on LinkedIn <span>↗</span></a>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Achievements Section -->
-    <section id="achievements" class="achievements-section">
-        <div class="achievements-container">
-            <div class="section-header" data-scroll-reveal>
-                <span class="section-label">MILESTONES</span>
-                <h2 class="section-title">Achievements & Recognition</h2>
-                <p class="section-subtitle">Hackathons, certifications, and competitive programming</p>
-            </div>
-
-            <div class="timeline-container">
-                <!-- Timeline Item 1 -->
-                <div class="timeline-item" data-scroll-reveal>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2025</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-trophy"></i>
-                        </div>
-                        <h3 class="timeline-title">SISTec Innovation Hackathon</h3>
-                        <p class="timeline-description">
-                            Secured <strong>1st place</strong> in the EdTech theme and <strong>4th place
-                                overall</strong>. Built an innovative learning platform that solves real-world
-                            educational challenges.
-                        </p>
-                        <span class="timeline-tag">Winner</span>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 2 -->
-                <div class="timeline-item" data-scroll-reveal>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2025</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-medal"></i>
-                        </div>
-                        <h3 class="timeline-title">Samadhan 2.0 Hackathon</h3>
-                        <p class="timeline-description">
-                            Achieved <strong>4th place</strong> in this national-level hackathon. Developed a scalable
-                            solution for smart city management using IoT and web technologies.
-                        </p>
-                        <span class="timeline-tag">National Finalist</span>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 3 -->
-                <div class="timeline-item" data-scroll-reveal>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2025</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-university"></i>
-                        </div>
-                        <h3 class="timeline-title">FinEdge Hackathon (IIT Bombay)</h3>
-                        <p class="timeline-description">
-                            Secured <strong>6th place</strong> among top teams nationwide. Created a fintech solution
-                            focusing on financial literacy and accessibility.
-                        </p>
-                        <span class="timeline-tag">Top 10</span>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 4 -->
-                <div class="timeline-item" data-scroll-reveal>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2024</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fab fa-adobe"></i>
-                        </div>
-                        <h3 class="timeline-title">Adobe Hackathon</h3>
-                        <p class="timeline-description">
-                            Selected for the <strong>second round</strong> in Adobe's "Connecting the Dots" challenge.
-                            Built an interactive PDF experience using Adobe's PDF Embed API.
-                        </p>
-                        <span class="timeline-tag">Shortlisted</span>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 5 -->
-                <div class="timeline-item" data-scroll-reveal>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2023-24</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-certificate"></i>
-                        </div>
-                        <h3 class="timeline-title">Full-Stack Certifications</h3>
-                        <p class="timeline-description">
-                            Mastered <strong>Java Full Stack</strong> and <strong>Python Django</strong> through
-                            comprehensive certification programs. Built strong foundation in backend architecture.
-                        </p>
-                        <span class="timeline-tag">Certified</span>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 6 -->
-                <div class="timeline-item" data-scroll-reveal>
-                    <div class="timeline-dot"></div>
-                    <div class="timeline-date">2022-24</div>
-                    <div class="timeline-content">
-                        <div class="timeline-icon">
-                            <i class="fas fa-code-branch"></i>
-                        </div>
-                        <h3 class="timeline-title">15+ Projects Delivered</h3>
-                        <p class="timeline-description">
-                            Successfully designed, built, and deployed over <strong>15 real-world applications</strong>,
-                            ranging from simple tools to complex full-stack platforms.
-                        </p>
-                        <span class="timeline-tag">Milestone</span>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Contact Section -->
-    <section id="contact" class="contact-section">
-        <div class="contact-container">
-            <div class="section-header" data-scroll-reveal>
-                <span class="section-label">GET IN TOUCH</span>
-                <h2 class="section-title">Have an Idea?<br>Let's Turn It Into Reality.</h2>
-            </div>
-
-            <div class="contact-content">
-                <div class="contact-info" data-scroll-reveal>
-                    <div class="contact-status">
-                        <span class="status-dot"></span>
-                        <span class="status-text">Available for new opportunities</span>
-                    </div>
-
-                    <p class="contact-intro">
-                        Whether you’re planning a business website, a mobile application, or a complete digital
-                        product, I’d love to hear about your project.
-                    </p>
-
-                    <div class="contact-details">
-                        <a href="mailto:satyachouhan778107@gmail.com" class="contact-card-item">
-                            <div class="contact-icon-box">
-                                <i class="fas fa-envelope"></i>
-                            </div>
-                            <div class="contact-text-group">
-                                <span class="contact-label-small">Email</span>
-                                <span class="contact-value-large">satyachouhan778107@gmail.com</span>
-                            </div>
-                        </a>
-
-                        <div class="contact-card-item">
-                            <div class="contact-icon-box">
-                                <i class="fas fa-map-marker-alt"></i>
-                            </div>
-                            <div class="contact-text-group">
-                                <span class="contact-label-small">Location</span>
-                                <span class="contact-value-large">Bhopal, India</span>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="social-connect">
-                        <h4 class="social-heading">Connect with me</h4>
-                        <div class="social-links-large">
-                            <a href="https://github.com/Satya7781" target="_blank" class="social-btn-large">
-                                <i class="fab fa-github"></i>
-                            </a>
-                            <a href="https://www.linkedin.com/in/satya-chouhan-68361232a" target="_blank"
-                                class="social-btn-large">
-                                <i class="fab fa-linkedin-in"></i>
-                            </a>
-                            <a href="https://discord.com/users/1417163691085791314" class="social-btn-large">
-                                <i class="fab fa-discord"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact-form-wrapper" data-scroll-reveal>
-                    <form class="contact-form-premium" id="contact-form" action="https://formspree.io/f/mkogladz"
-                        method="POST">
-                        <h3 class="form-title">Send a Message</h3>
-                        <div class="form-grid">
-                            <div class="form-group-premium">
-                                <input type="text" id="name" name="name" required placeholder=" ">
-                                <label for="name">Your Name</label>
-                                <i class="fas fa-user input-icon"></i>
-                            </div>
-                            <div class="form-group-premium">
-                                <input type="email" id="email" name="email" required placeholder=" ">
-                                <label for="email">Your Email</label>
-                                <i class="fas fa-envelope input-icon"></i>
-                            </div>
-                        </div>
-                        <div class="form-grid">
-                            <div class="form-group-premium">
-                                <input type="text" id="company" name="company" placeholder=" ">
-                                <label for="company">Company Name <span>(optional)</span></label>
-                                <i class="fas fa-building input-icon"></i>
-                            </div>
-                            <div class="form-group-premium">
-                                <select id="project-type" name="project_type" required>
-                                    <option value="" disabled selected>Project type</option>
-                                    <option>Website Development</option>
-                                    <option>Mobile App Development</option>
-                                    <option>Website & Mobile App</option>
-                                    <option>Other</option>
-                                </select>
-                                <label for="project-type" class="select-label">Project Type</label>
-                            </div>
-                        </div>
-                        <div class="form-grid">
-                            <div class="form-group-premium">
-                                <select id="budget" name="budget" required>
-                                    <option value="" disabled selected>Estimated budget</option>
-                                    <option>Under $1,000</option>
-                                    <option>$1,000 - $5,000</option>
-                                    <option>$5,000 - $10,000</option>
-                                    <option>$10,000+</option>
-                                    <option>Not sure yet</option>
-                                </select>
-                                <label for="budget" class="select-label">Estimated Budget</label>
-                            </div>
-                            <div class="form-group-premium">
-                                <select id="contact-method" name="preferred_contact" required>
-                                    <option value="" disabled selected>Preferred contact</option>
-                                    <option>Email</option>
-                                    <option>Video call</option>
-                                    <option>Either</option>
-                                </select>
-                                <label for="contact-method" class="select-label">Preferred Contact</label>
-                            </div>
-                        </div>
-                        <div class="form-group-premium">
-                            <input type="text" id="subject" name="_subject" required placeholder=" ">
-                            <label for="subject">Subject</label>
-                            <i class="fas fa-tag input-icon"></i>
-                        </div>
-                        <div class="form-group-premium">
-                            <textarea id="message" name="message" rows="5" required placeholder=" "></textarea>
-                            <label for="message">Your Message</label>
-                            <i class="fas fa-comment-alt input-icon textarea-icon"></i>
-                        </div>
-                        <div class="form-honeypot" aria-hidden="true">
-                            <label for="website">Leave this field empty</label>
-                            <input type="text" id="website" name="_gotcha" tabindex="-1" autocomplete="off">
-                        </div>
-                        <button type="submit" class="btn btn-primary btn-lg btn-glow">
-                            <span class="btn-text">Send Message</span>
-                            <span class="btn-icon"><i class="fas fa-paper-plane"></i></span>
-                        </button>
-                        <p class="form-status" id="form-status" role="status" aria-live="polite"></p>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Footer -->
-    <footer class="footer">
-        <div class="footer-container">
-            <p class="footer-quote">"The best code is the code that ships."</p>
-            <p class="footer-text">© 2025 Satya Chouhan • Built with intention • Designed for impact</p>
-        </div>
-    </footer>
-
-    <!-- Thank You Modal -->
-    <div class="modal-overlay" id="thankYouModal">
-        <div class="modal-content">
-            <div class="modal-icon">
-                <i class="fas fa-check-circle"></i>
-            </div>
-            <h2 class="modal-title">Thank You!</h2>
-            <p class="modal-message">Your message has been sent successfully. I'll get back to you as soon as possible.
-            </p>
-            <button class="btn btn-primary" onclick="closeModal()">
-                <span class="btn-text">Close</span>
-            </button>
-        </div>
-    </div>
-
-    <!-- Custom Cursor -->
-    <div class="cursor">
-        <div class="cursor-dot"></div>
-        <div class="cursor-outline"></div>
-    </div>
-
-    <!-- Scripts -->
-    <script src="script.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/three.js/r128/three.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" defer></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" defer></script>
+    <script src="content.js" defer></script>
+    <script src="script.js" defer></script>
 </body>
-
 </html>

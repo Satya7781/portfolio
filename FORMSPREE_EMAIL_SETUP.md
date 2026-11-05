@@ -90,3 +90,27 @@ subject in Formspree's `_subject` field. Do not hard-code your own address as
 ### Need More Help?
 
 Contact Formspree support: support@formspree.io
+
+## Email deliverability for hello@satyachouhan.me
+
+To improve delivery when sending from the custom domain:
+
+1. In your mailbox provider, add the provider's SPF record to the DNS TXT record for `satyachouhan.me`. Keep one combined SPF record only; do not create multiple SPF TXT records.
+2. Enable DKIM in the mailbox provider and publish the exact selector TXT or CNAME record it gives you.
+3. Add a DMARC TXT record at `_dmarc.satyachouhan.me`, starting with a monitoring policy such as `v=DMARC1; p=none; rua=mailto:hello@satyachouhan.me`, then tighten it to `quarantine` or `reject` after reviewing reports.
+4. Configure Formspree's notification and reply-to settings from the Formspree dashboard. Do not put SMTP credentials or API keys in the frontend.
+
+## Turnstile note
+
+The form contains an optional Cloudflare Turnstile mount point. Add the public site key in
+`content.js` to render it. Formspree can validate the submitted Turnstile token server-side
+when configured in its dashboard. If you need independent verification, route submissions
+through a Cloudflare Worker and keep the Turnstile secret key and email provider credentials
+in Worker secrets; never add them to `content.js` or `script.js`.
+
+## Cookie-free analytics
+
+The site has event hooks for `book_call_click`, `form_submit_*`, and `case_study_open`.
+Configure Plausible or Umami by adding their provider script and site ID; do not add a
+third-party analytics script that uses advertising cookies without updating the privacy policy
+and consent flow.

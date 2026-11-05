@@ -33,6 +33,19 @@
         if (email && content.professionalEmail) {
             email.href = `mailto:${content.professionalEmail}`;
         }
+        const form = $('#contact-form');
+        if (form && content.formEndpoint) form.action = content.formEndpoint;
+        const capability = $('[data-capability]');
+        if (capability && safeUrl(content.capabilitySheetUrl)) {
+            capability.href = content.capabilitySheetUrl;
+            capability.target = '_blank';
+            capability.rel = 'noopener';
+        } else if (capability) {
+            capability.href = '#contact';
+            capability.addEventListener('click', () => {
+                $('#form-status').textContent = 'The PDF overview is being prepared. Please request it by email.';
+            });
+        }
     }
 
     function renderContent() {
@@ -144,6 +157,7 @@
         const close = $('.modal-close');
         const open = (card) => {
             const project = content.projects[Number(card.dataset.project)];
+            trackEvent('case_study_open', { project: project?.title || 'unknown' });
             if (!project || !dialog || !output) return;
             const live = safeUrl(project.live);
             const code = safeUrl(project.code);
@@ -176,19 +190,72 @@
             button.disabled = true;
             button.textContent = 'Sending…';
             status.textContent = '';
+            trackEvent('form_submit_start');
             try {
                 const response = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { Accept: 'application/json' } });
                 if (!response.ok) throw new Error('Your message could not be sent. Please email me directly instead.');
                 form.reset();
                 status.textContent = 'Thanks — your message is on its way. I will reply within 24 hours.';
+                trackEvent('form_submit_success');
             } catch (error) {
                 status.textContent = error.message;
                 status.classList.add('error');
+                trackEvent('form_submit_error');
             } finally {
                 button.disabled = false;
                 button.innerHTML = original;
             }
         });
+    }
+
+    function trackEvent(name, props = {}) {
+        const event = { name, props, timestamp: new Date().toISOString() };
+        window.dataLayer = window.dataLayer || [];
+        window.dataLayer.push(event);
+        if (typeof window.plausible === 'function') window.plausible(name, { props });
+        if (typeof window.umami?.track === 'function') window.umami.track(name, props);
+    }
+
+    function setupTracking() {
+        $$('[data-booking]').forEach((link) => link.addEventListener('click', () => trackEvent('book_call_click')));
+    }
+
+    function setupClock() {
+        const clock = $('#india-time');
+        if (!clock) return;
+        const update = () => {
+            clock.textContent = new Intl.DateTimeFormat('en-IN', {
+                timeZone: 'Asia/Kolkata',
+                hour: '2-digit',
+                minute: '2-digit',
+                hour12: false
+            }).format(new Date());
+        };
+        update();
+        setInterval(update, 30000);
+    }
+
+    function setupCookieNotice() {
+        const notice = $('#cookie-notice');
+        const dismiss = $('#cookie-dismiss');
+        if (!notice || !dismiss) return;
+        if (localStorage.getItem('privacy-notice-dismissed') === 'true') notice.classList.add('hidden');
+        dismiss.addEventListener('click', () => {
+            localStorage.setItem('privacy-notice-dismissed', 'true');
+            notice.classList.add('hidden');
+        });
+    }
+
+    function setupTurnstile() {
+        const slot = $('#turnstile-slot');
+        if (!slot || !content.turnstileSiteKey || content.turnstileSiteKey.startsWith('TODO')) return;
+        const script = document.createElement('script');
+        script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
+        script.async = true;
+        script.onload = () => {
+            if (window.turnstile) window.turnstile.render(slot, { sitekey: content.turnstileSiteKey });
+        };
+        document.head.appendChild(script);
     }
 
     function setupInteractions() {
@@ -318,6 +385,10 @@
         setupFaq();
         setupCaseStudies();
         setupForm();
+        setupTracking();
+        setupClock();
+        setupCookieNotice();
+        setupTurnstile();
         setupInteractions();
         setupThreeScene();
         setupScrollScene();
