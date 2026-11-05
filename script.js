@@ -432,11 +432,16 @@ class ContactForm {
             e.preventDefault();
 
             const submitBtn = this.form.querySelector('.btn-primary');
+            const status = this.form.querySelector('#form-status');
             const originalText = submitBtn.innerHTML;
 
             // Show loading state
             submitBtn.innerHTML = '<span class="btn-text">Sending...</span>';
-            submitBtn.style.pointerEvents = 'none';
+            submitBtn.disabled = true;
+            if (status) {
+                status.textContent = '';
+                status.className = 'form-status';
+            }
 
             try {
                 // Submit to Formspree via AJAX
@@ -449,29 +454,30 @@ class ContactForm {
                     }
                 });
 
-                if (response.ok) {
-                    // Show success modal
-                    showModal();
-
-                    // Reset form
-                    this.form.reset();
-
-                    // Reset button
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.style.pointerEvents = 'auto';
-                } else {
-                    throw new Error('Form submission failed');
+                let result = {};
+                try {
+                    result = await response.json();
+                } catch {
+                    // Formspree may return an empty response for a successful request.
                 }
+
+                if (!response.ok) {
+                    const message = result.errors?.map(error => error.message).join(' ')
+                        || 'Your message could not be sent. Please try again.';
+                    throw new Error(message);
+                }
+
+                this.form.reset();
+                showModal();
             } catch (error) {
                 console.error('Error:', error);
-
-                // Show error message
-                submitBtn.innerHTML = '<span class="btn-text">Error! Try Again</span>';
-
-                setTimeout(() => {
-                    submitBtn.innerHTML = originalText;
-                    submitBtn.style.pointerEvents = 'auto';
-                }, 3000);
+                if (status) {
+                    status.textContent = error.message || 'Something went wrong. Please try again.';
+                    status.classList.add('error');
+                }
+            } finally {
+                submitBtn.innerHTML = originalText;
+                submitBtn.disabled = false;
             }
         });
 

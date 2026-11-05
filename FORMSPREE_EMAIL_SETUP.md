@@ -40,13 +40,11 @@ Add these email addresses to your Gmail contacts or whitelist:
 - **Email Delivery**: Sometimes delayed on free plan
 - Check if you've exceeded your monthly limit
 
-### Step 6: Alternative Email Configuration
+### Step 6: Verify the submission payload
 
-If issues persist, you can add a custom reply-to email in your form:
-
-```html
-<input type="hidden" name="_replyto" value="satyachouhan778107@gmail.com">
-```
+The website submits the visitor's email in the `email` field and the message
+subject in Formspree's `_subject` field. Do not hard-code your own address as
+`_replyto`: that would prevent you from replying directly to the visitor.
 
 ### Step 7: Test the Form
 
@@ -73,10 +71,11 @@ If issues persist, you can add a custom reply-to email in your form:
 
 ### What Changed in Your Website
 
-✅ **Form now submits via AJAX** - No page redirect
-✅ **Custom thank you modal** - Shows on same page
-✅ **Better user experience** - User stays on your site
-✅ **Form validation** - Proper error handling
+✅ **Form submits via AJAX** - No page redirect
+✅ **Custom thank-you modal** - Shows on the same page after a successful response
+✅ **User stays on the site** - The form does not open a new tab
+✅ **Formspree-compatible fields** - Visitor email and subject are sent correctly
+✅ **Visible error handling** - Failed submissions show an explanation below the form
 
 ### Testing Checklist
 
