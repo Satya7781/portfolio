@@ -67,9 +67,26 @@ window.PORTFOLIO_CONTENT = {
         { quote: 'TODO: add a third real client quote.', name: 'TODO: client name', role: 'TODO: role and company', link: '' }
     ],
     stack: [
-        { title: 'Build', items: ['React', 'JavaScript', 'Node.js', 'HTML / CSS'], projects: 'Code Editor · PDF Reader' },
-        { title: 'Connect', items: ['WebSockets', 'WebRTC', 'REST APIs', 'API integration'], projects: 'Code Editor · Creator tools' },
-        { title: 'Ship', items: ['Git', 'Docker', 'MySQL', 'Figma'], projects: 'Client websites · Product builds' }
+        {
+            title: 'Frontend experiences',
+            items: ['HTML', 'CSS', 'JavaScript', 'React', 'Responsive UI', 'Tailwind CSS'],
+            projects: 'SaaS dashboards · Creator tools · Client websites'
+        },
+        {
+            title: 'Backend and real-time',
+            items: ['Node.js', 'Express.js', 'REST APIs', 'WebSockets', 'WebRTC', 'Authentication'],
+            projects: 'Collaborative Code Editor · Creator tools'
+        },
+        {
+            title: 'Data and delivery',
+            items: ['MySQL', 'MongoDB', 'Git', 'Docker', 'Vercel / Netlify', 'Testing and debugging'],
+            projects: 'Product launches · API-backed web applications'
+        },
+        {
+            title: 'Design and mobile-ready',
+            items: ['Figma', 'React Native', 'Flutter'],
+            projects: 'Responsive product experiences · Cross-platform build foundations'
+        }
     ],
     faqs: [
         ['How do payments and milestones work?', 'Projects are split into agreed milestones. The exact payment schedule is confirmed in the proposal before work starts.'],
