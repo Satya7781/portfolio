@@ -66,3 +66,96 @@ button { color: inherit; }
 @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; animation: none !important; transition-duration: .01ms !important; }.reveal { opacity: 1; transform: none; } }
 :focus-visible { outline: 2px solid var(--cyan); outline-offset: 4px; }
 .policy-page { width: min(760px, calc(100% - 40px)); margin: 0 auto; padding: 70px 0; }.policy-page .brand { display: block; margin-bottom: 90px; }.policy-page h1 { margin: 16px 0 30px; font: 600 clamp(45px, 8vw, 78px)/1 var(--display); letter-spacing: -.06em; }.policy-page h2 { margin: 38px 0 8px; font: 500 24px var(--display); }.policy-page p { color: var(--muted); }.policy-page .button { margin-top: 20px; }
+
+/* Premium edge system */
+:is(.project-card, .service-card, .testimonial-card, .stack-group, .achievement-card, .contact-form, .video-card, .contact-banner, .case-modal) {
+    position: relative;
+    isolation: isolate;
+    border-color: transparent;
+    background-clip: padding-box;
+}
+
+:is(.project-card, .service-card, .testimonial-card, .stack-group, .achievement-card, .contact-form, .video-card, .contact-banner, .case-modal)::before {
+    content: "";
+    position: absolute;
+    inset: -1px;
+    z-index: -1;
+    border-radius: inherit;
+    padding: 1px;
+    background: linear-gradient(135deg, rgba(146, 228, 255, .36), rgba(255, 255, 255, .08) 42%, rgba(157, 125, 255, .32));
+    -webkit-mask: linear-gradient(#000 0 0) content-box, linear-gradient(#000 0 0);
+    -webkit-mask-composite: xor;
+    mask-composite: exclude;
+    opacity: .78;
+    pointer-events: none;
+    transition: opacity .35s var(--ease), background .35s var(--ease);
+}
+
+:is(.project-card, .service-card, .testimonial-card, .stack-group, .achievement-card, .contact-form, .video-card, .contact-banner, .case-modal):hover::before,
+:is(.project-card, .service-card, .testimonial-card, .stack-group, .achievement-card, .contact-form, .video-card, .contact-banner, .case-modal):focus-within::before {
+    opacity: 1;
+    background: linear-gradient(135deg, rgba(146, 228, 255, .82), rgba(255, 255, 255, .12) 42%, rgba(157, 125, 255, .72));
+}
+
+.project-card,
+.service-card,
+.testimonial-card,
+.stack-group,
+.achievement-card,
+.contact-form,
+.video-card,
+.contact-banner,
+.case-modal {
+    border-radius: 14px;
+    box-shadow: 0 18px 55px rgba(0, 0, 0, .18), inset 0 1px 0 rgba(255, 255, 255, .035);
+}
+
+.project-card:focus-visible,
+.service-card:focus-within,
+.faq-item:focus-within {
+    box-shadow: 0 0 0 3px rgba(146, 228, 255, .13), 0 18px 55px rgba(0, 0, 0, .24);
+}
+
+.process-row,
+.engagement-item,
+.faq-item,
+.client-strip {
+    border-color: rgba(255, 255, 255, .13);
+}
+
+.service-card,
+.project-card,
+.testimonial-card,
+.stack-group,
+.achievement-card {
+    background-color: rgba(14, 14, 20, .84);
+}
+
+.contact-banner,
+.video-card {
+    background-color: rgba(18, 18, 27, .7);
+}
+
+.project-preview {
+    border-radius: 13px;
+}
+
+.project-card:hover,
+.service-card:hover {
+    box-shadow: 0 25px 70px rgba(0, 0, 0, .28), 0 0 35px rgba(117, 174, 255, .08);
+}
+
+.button {
+    border-color: rgba(146, 228, 255, .25);
+}
+
+.button-ghost:hover,
+.text-link:hover,
+.contact-links a:hover,
+.client-strip a:hover {
+    color: var(--cyan);
+}
+
+.faq-question:hover {
+    color: var(--cyan);
+}

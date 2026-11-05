@@ -252,7 +252,7 @@
 
     function setupTurnstile() {
         const slot = $('#turnstile-slot');
-        if (!slot || !content.turnstileSiteKey || content.turnstileSiteKey.startsWith('TODO')) return;
+        if (!slot || !content.turnstileSiteKey) return;
         const script = document.createElement('script');
         script.src = 'https://challenges.cloudflare.com/turnstile/v0/api.js?render=explicit';
         script.async = true;

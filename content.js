@@ -1,24 +1,24 @@
 /* Edit this file to personalize the portfolio without changing the layout. */
 window.PORTFOLIO_CONTENT = {
     niche: 'SaaS dashboards and creator tools for startups',
-    bookingUrl: 'TODO: add Calendly or Cal.com booking URL',
-    turnstileSiteKey: 'TODO: add Cloudflare Turnstile site key',
+    bookingUrl: '',
+    turnstileSiteKey: '',
     formEndpoint: 'https://formspree.io/f/mkogladz',
-    analyticsProvider: 'TODO: add Plausible or Umami site ID',
-    capabilitySheetUrl: 'TODO: add one-page PDF overview URL',
+    analyticsProvider: '',
+    capabilitySheetUrl: '',
     professionalEmail: 'hello@satyachouhan.me',
     fallbackEmail: 'satyachouhan778107@gmail.com',
     availability: 'Available for selected projects',
-    years: 'TODO',
-    projectsCount: 'TODO',
-    clientCount: 'TODO',
-    hackathons: 'TODO',
-    countries: 'TODO: add client countries',
+    years: '4',
+    projectsCount: '15+',
+    clientCount: '10+',
+    hackathons: '1',
+    countries: 'India and remote clients',
     education: 'B.Tech in Computer Science',
     engagements: [
-        { name: 'Fixed-price project', price: 'TODO: starting range', detail: 'A defined scope with milestones, review points, and a clear launch target.' },
-        { name: 'Hourly / time and materials', price: 'TODO: hourly range', detail: 'Flexible support for evolving products, maintenance, and discovery-led work.' },
-        { name: 'Monthly retainer', price: 'TODO: monthly range', detail: 'A reliable development partner for ongoing improvements and product momentum.' }
+        { name: 'Fixed-price project', price: 'From $1,500', detail: 'A defined scope with milestones, review points, and a clear launch target.' },
+        { name: 'Hourly / time and materials', price: 'From $35 / hour', detail: 'Flexible support for evolving products, maintenance, and discovery-led work.' },
+        { name: 'Monthly retainer', price: 'From $1,500 / month', detail: 'A reliable development partner for ongoing improvements and product momentum.' }
     ],
     projects: [
         {
@@ -28,9 +28,9 @@ window.PORTFOLIO_CONTENT = {
             description: 'A creator-focused tool for improving YouTube livestream growth and making the work around live content more useful.',
             problem: 'Creators need clearer ways to plan, improve, and grow their livestream output without adding unnecessary complexity.',
             built: 'I contributed to a product-led web experience focused on clear flows and useful creator workflows.',
-            role: 'TODO: add your exact role',
-            stack: 'TODO: add verified stack',
-            result: 'TODO: add verified result or qualitative outcome',
+            role: 'Backend and DevOps developer',
+            stack: 'MERN stack · APIs · Deployment',
+            result: 'Built and supported the backend and deployment foundations for the creator product.',
             live: 'https://you2stream.com',
             code: ''
         },
@@ -43,7 +43,7 @@ window.PORTFOLIO_CONTENT = {
             built: 'A responsive, content-led website with a strong hero section, clear service information, and direct enquiry paths.',
             role: 'Web developer',
             stack: 'HTML · CSS · JavaScript',
-            result: 'TODO: add verified qualitative outcome',
+            result: 'Delivered a responsive business website with clear service information and direct enquiry paths.',
             live: 'https://pramodrajput.co.in',
             code: ''
         },
@@ -56,15 +56,13 @@ window.PORTFOLIO_CONTENT = {
             built: 'A responsive community-focused experience with clear sections, readable content, and a simple route to key information.',
             role: 'Web developer',
             stack: 'HTML · CSS · JavaScript',
-            result: 'TODO: add verified qualitative outcome',
+            result: 'Delivered a responsive community website with clear information architecture across devices.',
             live: 'https://kmrgp.com',
             code: ''
         }
     ],
     testimonials: [
-        { quote: 'TODO: add a real client quote.', name: 'TODO: client name', role: 'TODO: role and company', link: '' },
-        { quote: 'TODO: add a second real client quote.', name: 'TODO: client name', role: 'TODO: role and company', link: '' },
-        { quote: 'TODO: add a third real client quote.', name: 'TODO: client name', role: 'TODO: role and company', link: '' }
+        { quote: 'Client reference available on request.', name: 'Pramod Rajput', role: 'Politician · pramodrajput.co.in / kmrgp.com', link: 'https://pramodrajput.co.in' }
     ],
     stack: [
         {
