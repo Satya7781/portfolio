@@ -18,7 +18,7 @@ You mentioned that submissions are visible on the Formspree site but you're not 
 1. **Go to Your Form Dashboard**: Navigate to your form `mkogladz`
 2. **Check Email Settings**:
    - Click on "Settings" or "Email" tab
-   - Verify the **notification email** is set to: `satyachouhan778107@gmail.com`
+   - Verify the **notification email** is set to: `satya07781@gmail.com`
    - Make sure email notifications are **enabled**
 
 ### Step 3: Check Spam/Junk Folder
@@ -91,13 +91,13 @@ subject in Formspree's `_subject` field. Do not hard-code your own address as
 
 Contact Formspree support: support@formspree.io
 
-## Email deliverability for hello@satyachouhan.me
+## Email deliverability for satya07781@gmail.com
 
 To improve delivery when sending from the custom domain:
 
-1. In your mailbox provider, add the provider's SPF record to the DNS TXT record for `satyachouhan.me`. Keep one combined SPF record only; do not create multiple SPF TXT records.
-2. Enable DKIM in the mailbox provider and publish the exact selector TXT or CNAME record it gives you.
-3. Add a DMARC TXT record at `_dmarc.satyachouhan.me`, starting with a monitoring policy such as `v=DMARC1; p=none; rua=mailto:hello@satyachouhan.me`, then tighten it to `quarantine` or `reject` after reviewing reports.
+1. If you later send from a custom domain, add your mailbox provider's SPF record to that domain's DNS TXT record. Keep one combined SPF record only; do not create multiple SPF TXT records.
+2. If you later send from a custom domain, enable DKIM in the mailbox provider and publish the exact selector TXT or CNAME record it gives you.
+3. If you later send from a custom domain, add a DMARC TXT record at `_dmarc.yourdomain.com`, starting with a monitoring policy such as `v=DMARC1; p=none; rua=mailto:satya07781@gmail.com`, then tighten it after reviewing reports.
 4. Configure Formspree's notification and reply-to settings from the Formspree dashboard. Do not put SMTP credentials or API keys in the frontend.
 
 ## Turnstile note

@@ -57,7 +57,7 @@
                         <div class="preview-browser"><span></span><span></span><span></span><b>${project.previewLabel}</b></div>
                         <div class="preview-hero"><i></i><strong>${project.title}</strong><small>${project.category}</small></div>
                         <span class="preview-shade"></span>
-                        <span class="preview-label">Live site ↗</span>
+                        <span class="preview-label">${project.live || project.livePreview ? 'Open project ↗' : 'Case study ↗'}</span>
                     </div>
                     <span class="project-number">${String(index + 1).padStart(2, '0')}</span>
                     <div class="project-content"><span class="project-category">${project.category}</span><h3>${project.title}</h3><p>${project.description}</p><span class="project-open">Open case study ↗</span></div>
@@ -166,7 +166,7 @@
             if (!project || !dialog || !output) return;
             const live = safeUrl(project.live);
             const code = safeUrl(project.code);
-            output.innerHTML = `<span class="modal-category">${project.category}</span><h2>${project.title}</h2><h3>Problem</h3><p>${project.problem}</p><h3>What I built</h3><p>${project.built}</p><h3>My role</h3><p>${project.role}</p><h3>Tech stack</h3><p>${project.stack}</p><h3>Result / impact</h3><p>${project.result}</p><div class="modal-links">${live ? `<a class="button button-accent" href="${live}" target="_blank" rel="noopener">Live demo ↗</a>` : ''}${code ? `<a class="button button-ghost" href="${code}" target="_blank" rel="noopener">View code ↗</a>` : ''}</div>`;
+            output.innerHTML = `<span class="modal-category">${project.category}</span><h2>${project.title}</h2><div class="case-meta"><span><b>Role</b>${project.role}</span><span><b>Timeline</b>${project.timeline}</span></div><h3>Problem</h3><p>${project.problem}</p><h3>My approach</h3><p>${project.approach}</p><h3>What I built</h3><p>${project.built}</p><h3>Challenges and decisions</h3><p>${project.challenges}</p><h3>Tech stack</h3><p>${project.stack}</p><h3>Outcome / impact</h3><p>${project.result}</p><div class="modal-links">${live ? `<a class="button button-accent" href="${live}" target="_blank" rel="noopener">Live link ↗</a>` : ''}${code ? `<a class="button button-ghost" href="${code}" target="_blank" rel="noopener">View code ↗</a>` : ''}${project.caseStudy ? `<a class="button button-ghost" href="${project.caseStudy}">Full case study ↗</a>` : ''}</div>`;
             dialog.showModal();
             document.body.classList.add('modal-open');
         };
