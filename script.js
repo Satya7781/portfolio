@@ -106,9 +106,12 @@ class Navigation {
         if (!this.menuToggle) return;
 
         this.menuToggle.addEventListener('click', () => {
-            this.menuToggle.classList.toggle('active');
-            this.navLinks.classList.toggle('active');
-            document.body.style.overflow = this.navLinks.classList.contains('active') ? 'hidden' : 'auto';
+            const isOpen = !this.navLinks.classList.contains('active');
+            this.menuToggle.classList.toggle('active', isOpen);
+            this.navLinks.classList.toggle('active', isOpen);
+            this.menuToggle.setAttribute('aria-expanded', String(isOpen));
+            this.menuToggle.setAttribute('aria-label', isOpen ? 'Close navigation menu' : 'Open navigation menu');
+            document.body.style.overflow = isOpen ? 'hidden' : 'auto';
         });
 
         // Close menu on link click
@@ -116,6 +119,8 @@ class Navigation {
             link.addEventListener('click', () => {
                 this.menuToggle.classList.remove('active');
                 this.navLinks.classList.remove('active');
+                this.menuToggle.setAttribute('aria-expanded', 'false');
+                this.menuToggle.setAttribute('aria-label', 'Open navigation menu');
                 document.body.style.overflow = 'auto';
             });
         });
@@ -367,6 +372,12 @@ document.addEventListener('DOMContentLoaded', () => {
     if (modal) {
         modal.addEventListener('click', (e) => {
             if (e.target === modal) {
+                closeModal();
+            }
+        });
+
+        document.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape' && modal.classList.contains('active')) {
                 closeModal();
             }
         });
